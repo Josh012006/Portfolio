@@ -49,7 +49,7 @@ function Header() {
                 <span className="block lg:hidden" onClick = {() => {setShow(!show)}}><i className={`fa-bars fa-solid m-3 text-2xl rounded-md col-span-1 w-10 border-2 p-2 cursor-pointer ${color} ${borderColor}`} aria-hidden = "true"></i></span>
                 <i className={`${icon} fa-solid absolute right-0 m-5 lg:relative text-2xl col-span-1 lg:col-span-2 w-10 p-2 cursor-pointer ${color}`} aria-hidden = "true" onClick = {() => {dispatch(changeTheme());}}></i>
             </div>
-            <nav className={`col-span-12 lg:col-span-7 grid-cols-1 lg:grid lg:grid-cols-5 text-center items-center mt-3 mb-1 lg:mt-0 lg:mb-0 ${(show)? "grid" : "hidden"}`}>
+            <nav className={`col-span-12 lg:col-span-7 grid-cols-1 lg:grid lg:grid-cols-5 text-base lg:text-lg text-center items-center mt-3 mb-1 lg:mt-0 lg:mb-0 ${(show)? "grid" : "hidden"}`}>
                 <Link href = "/#home" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 ${hover}`}>Home</Link>
                 <Link href = "/#about" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 ${hover}`}>About me</Link>
                 <Link href = "/#skills" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 ${hover}`}>Skills</Link>
