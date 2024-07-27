@@ -48,9 +48,35 @@ function Contact() {
         setLoading(true);
 
         try {
-            
+            const formData = new FormData(e.target as HTMLFormElement);
+
+            const name = formData.get('name') as string;
+            const email = formData.get('email') as string;
+            const message = formData.get('message') as string;
+
+            const response = await fetch('/api/sendMail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setLoading(false);
+                setSuccess(true);
+                setTimeout(() => {
+                    setSuccess(false);
+                }, 5000);
+            } else {
+                setError(data.message);
+            }
+
         } catch (error) {
-            
+            console.log(error);
+            setError('An error occurred while sending the email in the form!');
         }
     }
 

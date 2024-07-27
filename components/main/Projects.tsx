@@ -81,7 +81,8 @@ function Projects() {
             <br />
             <p className="p-4 text-center">
                 I&apos;ve completed a number of small projects to display my skills. I will show an 
-                overview here but they can be further seen on my github page.
+                overview here but they can be further seen on my github page. Some of the projects are online, 
+                so go check the github and leave a star💫 if possible!
             </p>
             <div className="p-5">
                 <Project title="Weather App" src="/projects/videos/weather.mp4" github="https://github.com/Josh012006/Weather-App">
