@@ -26,7 +26,7 @@ function Home() {
 
 
     return (
-        <section id="home" className={`p-5 min-h-60 lg:min-h-125 relative overflow-hidden`} style={{backgroundImage: bgColor}}>
+        <section id="home" className={`p-5 min-h-56 lg:min-h-125 relative overflow-hidden`} style={{backgroundImage: bgColor}}>
             <div className="p-3 text-white min-w-full absolute top-0 left-0 min-h-full flex flex-col text-center justify-center">
                 <h1 className = "text-base lg:text-3xl my-2">Hi, I&apos;m <span>Josué MONGAN</span></h1>
                 <p className={`${font.className} text-xl lg:text-3xl m-2 lg:m-3`}>Welcome to the place where Imagination is turned into Reality, where Simplicity underlines Amazing Ideas.</p>
