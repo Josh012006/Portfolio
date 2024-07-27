@@ -85,20 +85,20 @@ function Contact() {
     return (
         <section id="contact" className={`${bgColor} ${textColor} p-4 min-h-125 flex flex-col items-center`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>Let&apos;s connect</h1>
-            <p className="p-2 text-center">Happy you came all the way down 🥳. I would be glad to connect with you. So why not leave your impression of the website. Have a nice day!</p>
+            <p className="p-2 text-base lg:text-xl text-center">Happy you came all the way down 🥳. I would be glad to connect with you. So why not leave your impression of the website. Have a nice day!</p>
             {error && <p className="text-center text-red-500 bg-red-200 border-2 border-red-500 p-3 rounded-lg">{error}</p>}
             {success && <p className="text-center text-green-500 bg-green-200 border-2 border-green-500 p-3 rounded-lg">Email sent successfully!</p>}
             {loading && <div className="flex justify-center items-center p-3">
                 <Loader color={loader} size={40} />
             </div>}
-            <form id="contactForm" className={`${section} my-10 min-h-96 rounded-lg w-11/12 lg:w-2/6 p-9 flex flex-col `} onSubmit = {handleSubmit}>
-                <label htmlFor="name" className="text-base lg:text-lg my-2">Name</label>
+            <form id="contactForm" className={`${section} text-base lg:text-lg my-10 min-h-96 rounded-lg w-11/12 lg:w-2/6 p-9 flex flex-col `} onSubmit = {handleSubmit}>
+                <label htmlFor="name" className="my-2">Name</label>
                 <input type="text" placeholder="John Doe" name="name" id="name" className={`rounded-lg p-3 h-10 ${fieldsColor}`} required />
-                <label htmlFor="email" className="text-base lg:text-lg my-2">Email</label>
+                <label htmlFor="email" className="my-2">Email</label>
                 <input type="email" placeholder="example@gmail.com" name="email" id="email" className={`rounded-lg p-3 h-10 ${fieldsColor}`} required />
-                <label htmlFor="message" className="text-base lg:text-lg my-2">Message</label>
+                <label htmlFor="message" className="my-2">Message</label>
                 <textarea name="message" placeholder="Say Hi!" id="message" className={`rounded-lg p-3 ${fieldsColor}`} required></textarea>
-                <button className={`rounded-lg p-2 mt-5 w-1/4 mx-auto ${fieldsColor} text-base lg:text-lg`} type="submit">Envoyer</button>
+                <button className={`rounded-lg p-2 mt-5 mx-auto ${fieldsColor} text-base lg:text-lg`} type="submit">Envoyer</button>
             </form>
         </section>
     )

@@ -26,11 +26,11 @@ function Home() {
 
 
     return (
-        <section id="home" className={`p-5 min-h-72 lg:min-h-125 relative overflow-hidden`} style={{backgroundImage: bgColor}}>
+        <section id="home" className={`p-5 min-h-60 lg:min-h-125 relative overflow-hidden`} style={{backgroundImage: bgColor}}>
             <div className="p-3 text-white min-w-full absolute top-0 left-0 min-h-full flex flex-col text-center justify-center">
-                <h1 className = "text-xl lg:text-3xl my-2">Hi, I&apos;m <span>Josué MONGAN</span></h1>
-                <p className={`${font.className} text-2xl lg:text-3xl m-3`}>Welcome to the place where Imagination is turned into Reality, where Simplicity underlines Amazing Ideas.</p>
-                <p className="whitespace-normal m-5 text-lg lg:text-2xl font-bold">Passionate MERN Developer | Self-taught C++ developer | AI enthusiast</p>
+                <h1 className = "text-lg lg:text-3xl my-2">Hi, I&apos;m <span>Josué MONGAN</span></h1>
+                <p className={`${font.className} text-xl lg:text-3xl m-3`}>Welcome to the place where Imagination is turned into Reality, where Simplicity underlines Amazing Ideas.</p>
+                <p className="whitespace-normal m-5 text-base lg:text-2xl font-bold">Passionate MERN Developer | Self-taught C++ developer | AI enthusiast</p>
             </div>
             <video className="absolute top-0 left-0 min-w-full min-h-full -z-10" autoPlay muted loop>
                 <source src="/home-animation.mp4" type="video/mp4" />

@@ -62,7 +62,7 @@ function About() {
         <section className={`min-h-125 py-8 flex justify-center items-center ${aboutSection} `} id="about">
             <div className={`grid grid-cols-1 lg:grid-cols-5 ${aboutDiv} rounded-lg min-h-96 w-5/6`}>
                 <div className={`col-span-1 lg:col-span-2 min-h-96 about-photo lg:min-h-125 bg-cover bg-no-repeat bg-center rounded-t-lg lg:!rounded-l-lg lg:rounded-t-0 relative ${textDiv} ${animation}`} style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/${images[currentImage]}')`}}></div>
-                <div className={`col-span-1 lg:col-span-3 text-base lg:text-xl flex flex-col text-justify indent-6 justify-center py-5 px-11`}>
+                <div className={`col-span-1 lg:col-span-3 text-sm lg:text-xl flex flex-col text-justify indent-6 justify-center py-5 px-5 lg:px-11`}>
                     <h1 className={`text-center text-3xl lg:text-4xl my-10 ${font.className}`}>About me</h1>
                     <p>
                         Hello again😁, I&apos;m Josué Mongan, a passionate and dedicated MERN full-stack web developer and
@@ -89,11 +89,11 @@ function About() {
                     </p>
                     <br />
                     <br />
-                    <div>
-                        <Link href="/J_Mongan CV.pdf" target="_blank" className={`${buttonColor} rounded-md p-2`}>Download Resume<i className="fa-solid fa-download" aria-hidden="true"></i></Link>
-                        <div className="flex mt-6">
-                            <Link href="https://github.com/Josh012006" target="_blank"><i className="fa-brands fa-github" aria-hidden="true"></i></Link>
-                            <Link href="https://www.linkedin.com/in/josu%C3%A9-mongan-a7b6242b8/" target="_blank"><i className="fa-brands fa-linkedin" aria-hidden="true"></i></Link>
+                    <div className="flex flex-col items-center">
+                        <Link href="/J_Mongan CV.pdf" target="_blank" className={`${buttonColor} text-center flex items-center justify-around rounded-md p-2`}><span>Download Resume</span><i className="fa-solid fa-download mx-2" aria-hidden="true"></i></Link>
+                        <div className="grid grid-cols-2 justify-items-center mt-6">
+                            <Link href="https://github.com/Josh012006" className="text-center" target="_blank"><i className="fa-brands fa-github" aria-hidden="true"></i></Link>
+                            <Link href="https://www.linkedin.com/in/josu%C3%A9-mongan-a7b6242b8/" className="text-center" target="_blank"><i className="fa-brands fa-linkedin" aria-hidden="true"></i></Link>
                         </div>
                     </div>
                 </div>

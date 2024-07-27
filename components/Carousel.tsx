@@ -49,7 +49,7 @@ function Carousel ({ skills, type, myInterval = 3000 }: { skills:string[], type:
                     {type === "hard" && <i className={`${skill} text-center text-9xl my-auto py-3`} aria-hidden="true"></i>}
                     {type === "soft" && <div className='flex flex-col items-center justify-center'>
                         <Image alt={`${skill}`} src={`/skills/${skill.toLowerCase()}.webp`} className={`mx-auto my-auto py-3`} width={128} height={128} />
-                        <h3 className='text-center text-2xl my-2'>{skill}</h3>
+                        <h3 className='text-center text-base lg:text-2xl my-2'>{skill}</h3>
                     </div>}
                 </div>
                 ))}
