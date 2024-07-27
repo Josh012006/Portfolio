@@ -11,10 +11,10 @@ const font = Caveat({ subsets: ["latin"], weight: '400' });
 
 
 const images = [
-    'about0.jpg',
-    'about1.jpg',
-    'about2.jpg',
-    'about3.jpg',
+    'about0.webp',
+    'about1.webp',
+    'about2.webp',
+    'about3.webp',
 ];
 
 
