@@ -66,7 +66,7 @@ function Projects() {
         <section id="projects" className={`${bgColor} ${textColor} p-4 min-h-125 flex flex-col items-center`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>Projects</h1>
             <div className={`min-h-125 my-16 mx-5 w-full lg:w-4/6 rounded-lg border-2 ${borderColor} relative bg-transparent`}>
-                <div className={`min-h-125 rounded-lg m-3 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat`} style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/projects/g${selectedProject}.webp')`}}>
+                <div className={`min-h-125 rounded-lg m-3 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat`} style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/projects/g${selectedProject}.webp')`}}>
                     <h2 className={`text-center text-sm text-white italic`}>{projects[selectedProject]}</h2>
                     <div className="flex flex-col lg:flex-row items-center justify-center my-28">
                         {projects && projects.map((project, index) => {
