@@ -69,13 +69,14 @@ function Contact() {
                 setSuccess(true);
                 setTimeout(() => {
                     setSuccess(false);
-                }, 5000);
+                }, 3000);
             } else {
                 setError(data.message);
             }
 
         } catch (error) {
             console.log(error);
+            setLoading(false);
             setError('An error occurred while sending the email in the form!');
         }
     }
