@@ -8,7 +8,7 @@ import { ReactNode, useEffect, useState } from "react";
 
 
 
-function Project({ children, title, src, github } : { children: ReactNode, title: string, src: string, github: string }) {
+function Project({ children, title, src, poster, github } : { children: ReactNode, title: string, src: string, poster: string, github: string }) {
 
     const [num, setNum] = useState(0);
 
@@ -19,8 +19,8 @@ function Project({ children, title, src, github } : { children: ReactNode, title
 
 
     return (
-        <div className="min-h-96 lg:m-6 grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center text-basm lg:text-lg">
-            {(num % 2 == 0) && <video className="rounded-lg m-5" preload="none" controls>
+        <div className="min-h-96 lg:m-6 grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center text-sm lg:text-lg">
+            {(num % 2 == 0) && <video className="rounded-lg m-5" preload="none" poster={poster} controls>
                 <source src={src} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>}
@@ -32,7 +32,7 @@ function Project({ children, title, src, github } : { children: ReactNode, title
                 <br />
                 You can find the source code <Link target="_blank" href={github} className="text-blue-700">here</Link>.
             </div>
-            {(num % 2 == 1) && <video className="rounded-lg m-5" preload="none" controls>
+            {(num % 2 == 1) && <video className="rounded-lg m-5" preload="none" poster={poster} controls>
                 <source src={src} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>}
