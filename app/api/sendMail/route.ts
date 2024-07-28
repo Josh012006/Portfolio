@@ -26,14 +26,18 @@ export async function POST(req: NextRequest, res: NextResponse) {
             `
         };
     
-        await transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-                console.log("An error occurred in the transporter");
-                throw new Error("An error occured in the transporter");
-            }
-            else {
-                console.log(info);
-            }
+        await new Promise((resolve, reject) => {
+            transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                    console.log("An error occurred in the transporter");
+                    reject(error);
+                    throw new Error("An error occured in the transporter");
+                }
+                else {
+                    console.log(info);
+                    resolve(info);
+                }
+            });
         });
 
         return Response.json({ message: 'Email sent successfully!' }, { status: 200 });
