@@ -26,7 +26,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
             `
         };
     
-        transporter.sendMail(mailOptions, function(error, info){
+        await transporter.sendMail(mailOptions, function(error, info){
             if (error) {
                 console.log("An error occurred in the transporter");
                 return Response.json({ message: 'An error occurred while sending the email' }, { status: 500 });
