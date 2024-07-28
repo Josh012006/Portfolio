@@ -76,13 +76,13 @@ function Skills () {
         <section id="skills"  className={`${bgColor} ${textColor} py-4 min-h-125`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>My Skills</h1>
             <div className="py-3">
-                <h2 className={`text-center lg:text-xl mt-2 mb-5 ${textColor}`}>Hard Skills</h2>
+                <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 ${textColor}`}>Hard Skills</h2>
                 <div className={`${carouselColor} w-full min-h-64`}>
                     <Carousel skills={hardSkills} type="hard" myInterval={3000} />
                 </div>
             </div>
             <div className="py-3">
-                <h2 className={`text-center lg:text-xl mt-2 mb-5 ${textColor}`}>Soft Skills</h2>
+                <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 ${textColor}`}>Soft Skills</h2>
                 <div className={`${carouselColor} w-full min-h-64`}>
                     <Carousel type="soft" skills={softSkills} myInterval={3200} />
                 </div>

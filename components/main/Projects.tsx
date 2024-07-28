@@ -79,7 +79,7 @@ function Projects() {
                 </div>
             </div>
             <br />
-            <p className="p-4 text-center text-base lg:text-xl">
+            <p className="p-4 text-center text-sm lg:text-xl">
                 I&apos;ve completed a number of small projects to display my skills. I will show an 
                 overview here but they can be further seen on my github page. Some of the projects are online, 
                 so go check the github and leave a star💫 if possible!

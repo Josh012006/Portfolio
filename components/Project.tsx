@@ -19,7 +19,7 @@ function Project({ children, title, src, github } : { children: ReactNode, title
 
 
     return (
-        <div className="min-h-96 lg:m-6 grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center text-base lg:text-lg">
+        <div className="min-h-96 lg:m-6 grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center text-basm lg:text-lg">
             {(num % 2 == 0) && <video className="rounded-lg m-5" preload="none" controls>
                 <source src={src} type="video/mp4" />
                 Your browser does not support the video tag.
