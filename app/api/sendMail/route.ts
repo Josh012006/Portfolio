@@ -29,11 +29,10 @@ export async function POST(req: NextRequest, res: NextResponse) {
         await transporter.sendMail(mailOptions, function(error, info){
             if (error) {
                 console.log("An error occurred in the transporter");
-                return Response.json({ message: 'An error occurred while sending the email' }, { status: 500 });
+                throw new Error("An error occured in the transporter");
             }
             else {
                 console.log(info);
-                return Response.json({ message: 'Email sent successfully!' }, { status: 200 });
             }
         });
 
