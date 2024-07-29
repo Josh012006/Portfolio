@@ -27,7 +27,7 @@ const projects = [
 
 function Projects() {
 
-
+    // * Managing the theme changes
     const [bgColor, setBgColor] = useState('bg-zinc-900');
     const [textColor, setTextColor] = useState('text-white');
     const [borderColor, setBorderColor] = useState('border-white');
