@@ -8,7 +8,7 @@ import { ReactNode, useEffect, useState } from "react";
 
 
 
-function Project({ children, title, src, poster, github } : { children: ReactNode, title: string, src: string, poster: string, github: string }) {
+function Project({ children, title, src, poster, github, demo } : { children: ReactNode, title: string, src: string, poster: string, github: string, demo?: string }) {
 
     const [num, setNum] = useState(0);
 
@@ -31,6 +31,7 @@ function Project({ children, title, src, poster, github } : { children: ReactNod
                 </div>
                 <br />
                 You can find the source code <Link target="_blank" href={github} className="text-blue-700">here</Link>.
+                {demo && <> You can also find the demo <Link target="_blank" href={demo} className="text-blue-700">here</Link>.</>}
             </div>
             {(num % 2 == 1) && <video className="rounded-lg m-5" preload="none" poster={poster} controls>
                 <source src={src} type="video/mp4" />

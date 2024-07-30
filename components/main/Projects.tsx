@@ -102,7 +102,7 @@ function Projects() {
                     solid use of the basic technologies.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g1.webp">
+                <Project title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g1.webp" demo="https://techmasters-delta.vercel.app/">
                     Modest website for selling products coded mainly using Express and Handlebars. It&apos;s really simple 😄.
                     <br />
                     <br />
@@ -137,7 +137,7 @@ function Projects() {
                     So it also helped me touch multer. I&apos;ve also used the FilePond library that is perfect for files uploading.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g4.webp">
+                <Project title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g4.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
                     Le Café du Coin is a demonstration website for a café, built with React via create-react-app. This project showcases the key features of a modern showcase 
                     site, offering an intuitive, responsive user interface.
                     <br />
@@ -146,7 +146,7 @@ function Projects() {
                     or showcase site development.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g5.webp">
+                <Project title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g5.webp" demo="https://health-appointment.vercel.app/">
                     An appointment app made with Next.js and TailwindCSS. It&apos;s the greatest project I&apos;ve worked on till now.
                     <br />
                     <br />
