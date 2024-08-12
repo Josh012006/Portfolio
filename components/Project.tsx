@@ -8,7 +8,7 @@ import { ReactNode, useEffect, useState } from "react";
 
 
 
-function Project({ children, title, src, poster, github, demo } : { children: ReactNode, title: string, src: string, poster: string, github: string, demo?: string }) {
+function Project({ children, title, src, poster, github, demo, id } : { children: ReactNode, title: string, src: string, poster: string, github: string, demo?: string, id: string }) {
 
     const [num, setNum] = useState(0);
 
@@ -19,7 +19,7 @@ function Project({ children, title, src, poster, github, demo } : { children: Re
 
 
     return (
-        <div className="min-h-96 lg:m-6 grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center text-sm lg:text-lg">
+        <div className="min-h-96 lg:m-6 grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center text-sm lg:text-lg" id={id}>
             {(num % 2 == 0) && <video className="rounded-lg m-5" preload="none" poster={poster} controls>
                 <source src={src} type="video/mp4" />
                 Your browser does not support the video tag.

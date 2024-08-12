@@ -8,6 +8,7 @@ import Project from "../Project";
 
 
 import { Caveat } from "next/font/google";
+import Link from "next/link";
 
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
@@ -17,7 +18,7 @@ const projects = [
     'Weather App',
     'Tech Company Website',
     'C++ Task Manager',
-    'CMS Website',
+    'Social Media Website',
     'Coffee Shop Website',
     'Health Appointment',
 ];
@@ -71,7 +72,7 @@ function Projects() {
                     <div className="flex flex-col lg:flex-row items-center justify-center my-28">
                         {projects && projects.map((project, index) => {
                             return <div key={index} className={`flex justify-center items-center lg:flex-col transform smooth-translate ${(selectedProject === index)? "-translate-x-10 lg:-translate-y-14 lg:-translate-x-0" : ""}`}>
-                                <div className="m-1 rounded-sm w-28 h-4 lg:w-4 lg:h-40 bg-cover bg-no-repeat bg-center cursor-pointer" style={{backgroundImage: `url('/projects/ming${index}.webp')`}} onMouseEnter={() => {setSelectedProject(index)}}></div>
+                                <Link href={`/#ming${index}`} className="m-1 rounded-sm w-28 h-4 lg:w-4 lg:h-40 bg-cover bg-no-repeat bg-center cursor-pointer" style={{backgroundImage: `url('/projects/ming${index}.webp')`}} onMouseEnter={() => {setSelectedProject(index)}}></Link>
                                 <span className={`border-white border rounded-full w-2 h-2 ${(selectedProject === index)? "block" : "hidden"}`}></span>
                             </div>
                         })}
@@ -85,7 +86,7 @@ function Projects() {
                 so go check the github and leave a star💫 if possible!
             </p>
             <div className="p-0 lg:p-5">
-                <Project title="Weather App" src="/projects/videos/weather.mp4" github="https://github.com/Josh012006/Weather-App" poster="/projects/g0.webp">
+                <Project id="ming0" title="Weather App" src="/projects/videos/weather.mp4" github="https://github.com/Josh012006/Weather-App" poster="/projects/g0.webp">
                     A simple JavaScript based web app that helps you see the weather ⛅.
                     <br />
                     <br />
@@ -102,7 +103,7 @@ function Projects() {
                     solid use of the basic technologies.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g1.webp" demo="https://techmasters-delta.vercel.app/">
+                <Project id="ming1" title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g1.webp" demo="https://techmasters-delta.vercel.app/">
                     Modest website for selling products coded mainly using Express and Handlebars. It&apos;s really simple 😄.
                     <br />
                     <br />
@@ -115,7 +116,7 @@ function Projects() {
                     the design of the website.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g2.webp">
+                <Project id="ming2" title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g2.webp">
                     Simple tasks manager wrote in C++. I haven&apos;t done the GUI yet so it runs in the terminal.
                     But I plan to do it with Qt.
                     <br />
@@ -128,7 +129,7 @@ function Projects() {
                     But there will be an app version done with Qt in the near future.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="Social Media Website" src="/projects/videos/cms.mp4" github="https://github.com/Josh012006/CMS" poster="/projects/g3.webp">
+                <Project id="ming3" title="Social Media Website" src="/projects/videos/cms.mp4" github="https://github.com/Josh012006/CMS" poster="/projects/g3.webp">
                     A simple social media app where users can post content and view others&apos; posts. Built with TypeScript and Vite. I&apos;ve used MongoDB as the database.
                     <br />
                     <br />
@@ -137,7 +138,7 @@ function Projects() {
                     So it also helped me touch multer. I&apos;ve also used the FilePond library that is perfect for files uploading.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g4.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
+                <Project id="ming4" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g4.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
                     Le Café du Coin is a demonstration website for a café, built with React via create-react-app. This project showcases the key features of a modern showcase 
                     site, offering an intuitive, responsive user interface.
                     <br />
@@ -146,7 +147,7 @@ function Projects() {
                     or showcase site development.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g5.webp" demo="https://health-appointment.vercel.app/">
+                <Project id="ming5" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g5.webp" demo="https://health-appointment.vercel.app/">
                     An appointment app made with Next.js and TailwindCSS. It&apos;s the greatest project I&apos;ve worked on till now.
                     <br />
                     <br />
