@@ -128,8 +128,8 @@ function Projects() {
                     But there will be an app version done with Qt in the near future.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project title="CMS Website" src="/projects/videos/cms.mp4" github="https://github.com/Josh012006/CMS" poster="/projects/g3.webp">
-                    A simple CMS app where users can post content and view others&apos; posts. Built with TypeScript and Vite. I&apos;ve used MongoDB as the database.
+                <Project title="Social Media Website" src="/projects/videos/cms.mp4" github="https://github.com/Josh012006/CMS" poster="/projects/g3.webp">
+                    A simple social media app where users can post content and view others&apos; posts. Built with TypeScript and Vite. I&apos;ve used MongoDB as the database.
                     <br />
                     <br />
                     On this site you can make posts and like others&apos; posts. This project really helped me dive deeper into TypeScript and MongoDB. With the use of
