@@ -129,13 +129,16 @@ function Projects() {
                     But there will be an app version done with Qt in the near future.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming3" title="Social Media Website" src="/projects/videos/cms.mp4" github="https://github.com/Josh012006/CMS" poster="/projects/g3.webp">
-                    A simple social media app where users can post content and view others&apos; posts. Built with TypeScript and Vite. I&apos;ve used MongoDB as the database.
+                <Project id="ming3" title="Social Media Website" src="/projects/videos/social-media.mp4" github="https://github.com/Josh012006/PRODIGY_FS_05" poster="/projects/g3.webp">
+                    A complete social media platform where users can post content and view others&apos; posts. It&apos;s built with Next.js, TypeScript, TailwindCSS for the style and Mongoose(MongoDB) for the database.
                     <br />
                     <br />
-                    On this site you can make posts and like others&apos; posts. This project really helped me dive deeper into TypeScript and MongoDB. With the use of
-                    Mongoose, I was able to define user, post and media models and controllers. It was my first time really dealing with the storage of images in a database.
-                    So it also helped me touch multer. I&apos;ve also used the FilePond library that is perfect for files uploading.
+                    This web app uses complex interactions between user, post and comment models in other to display the user&pos;s data and the posts. Like any other social media app, it has a home page where you can see 
+                    other people posts, a creation page to add your own, a search page to find your friends and their posts on the app and finally a profile page to manage your account.
+                    <br />
+                    <br />
+                    The project really helped me dive deeper into state management in React and in Next.js. I&apos;ve also had the opportunity to deal with complex models and data structures,
+                    using referencing and embedding in MongoDB. I&apos;m really proud of the result and I think it&apos;s a really good project to show my skills in web development.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming4" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g4.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
