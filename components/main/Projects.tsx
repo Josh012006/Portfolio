@@ -81,7 +81,7 @@ function Projects() {
             </div>
             <br />
             <p className="p-4 text-center text-sm lg:text-xl">
-                I&apos;ve completed a number of small projects to display my skills. I will show an 
+                I&apos;ve completed a number of interesting projects to display my skills. I will show an 
                 overview here but they can be further seen on my github page. Some of the projects are online, 
                 so go check the github and leave a star💫 if possible!
             </p>
@@ -162,6 +162,9 @@ function Projects() {
                     The part where I struggled the most is the management of the security and the restrictions on the app. It was really challenging to imagine all the cases and the possibilities to try to avoid disorder and attacks.
                 </Project>
             </div>
+            <p className="p-4 text-center text-sm lg:text-xl">
+                Those are only a part of my projects. You can see a few others <Link href="/projects" target="_blank" className="text-blue-700">here</Link>. But, I also have many more on my <Link href="https://github.com/Josh012006" target="_blank" className="text-blue-700">github page</Link> check them out and leave a star💫 if you like them!
+            </p>
         </section>
     )
 }
