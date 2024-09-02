@@ -31,7 +31,7 @@ function ExperiencePage() {
     return(
         <section id="experience" className={`${bgColor} ${textColor} p-4 min-h-125 flex flex-col items-center`}>
             <h1 className="text-center text-3xl lg:text-4xl py-10">My Experience</h1>
-            <p className="text-center my-2">I&apos;ve had many experiences since I started programming and particularly web development.</p>
+            <p className="text-center my-2 text-sm lg:text-lg">I&apos;ve had many experiences since I started programming and particularly web development.</p>
             <div className="p-0 lg:p-5">
                 <Experience title="Software Development Bootcamp at GOMYCODE" logo="gomycode.jpeg" period="28 January 2024 - 13 July 2024 (6 months)" companyInfos="GomyCode Sénégal" site="https://gomycode.com/home-01/" mail="hello@gomycode.com">
                     I participated in a 6 months bootcamp at GOMYCODE SENEGAL. There I learned all there was to know about fullstack web development. We started with the basics like HTML, CSS (with Bootstrap, TailwindCSS and also SASS) and JavaScript (with the DOM and ES6). We then learned how to use Git and Github for Version Control. 
