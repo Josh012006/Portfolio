@@ -9,7 +9,7 @@ import { ReactNode } from "react";
 
 function Experience({children, title, logo, period, companyInfos, site, mail}: {children: ReactNode, title: string, logo: string, period: string, companyInfos: string, mail: string, site?: string}) {
     return(
-        <div className="my-7">
+        <div className="my-7 text-sm lg:text-lg">
             <h2 className="text-center text-xl lg:text-2xl py-3 font-bold">{title}</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center gap-1">
                 <div className="flex flex-col gap-1">
