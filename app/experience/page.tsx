@@ -50,7 +50,7 @@ function ExperiencePage() {
                     administrators to perform CRUD (Create, Read, Update, Delete) operations on employee records, iii. a real-time chat application using WebSocket technology to enable instant messaging between users, and iv. a social media platform. I learned a lot and had the opportunity to experiment 
                     more with WebSockets and JWT. All my projects are displayed on my linkedin as posts so you can go and check it.
                     <br />
-                    As a reward for my outstanding performances, I received a <Link className="text-blue-700 underline" target="_blank" href="https://prodigyinfotech.dev/verify?cin=PIT/AUG24/05634">certificate of completion</Link> and a <Link className="text-blue-700 underline" target="_blank" href="/experience/Letter of Recommendation - Progigy InfoTech.pdf">letter of recommendation</Link> from the company.
+                    As a reward for my outstanding performances, I received a <Link className="text-blue-700 underline" target="_blank" href="/experience/Certificate of Completion - Progigy InfoTech.pdf">certificate of completion</Link> and a <Link className="text-blue-700 underline" target="_blank" href="/experience/Letter of Recommendation - Progigy InfoTech.pdf">letter of recommendation</Link> from the company.
                 </Experience>
             </div>
         </section>
