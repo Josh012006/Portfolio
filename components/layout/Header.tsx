@@ -43,7 +43,7 @@ function Header() {
     const [show, setShow] = useState(false);
 
     return (
-        <header className={`min-h-12 ${color} lg:px-2 grid grid-cols-12 items-center border-b-2 border-b-zinc-900`} style={{background: bg}}>
+        <header className={`min-h-12 ${color} lg:px-2 grid grid-cols-12 items-center border-b-2 border-b-zinc-900 lg:sticky lg:z-50 lg:top-0`} style={{background: bg}}>
             <Link href='/' className = {`${font.className} text-4xl font-bold col-span-12 text-center m-3 lg:col-span-4`}>JM</Link>
             <div className="grid grid-cols-2 col-span-12 lg:col-span-1 items-center">
                 <span className="block lg:hidden" onClick = {() => {setShow(!show)}}><i className={`fa-bars fa-solid m-3 text-2xl rounded-md col-span-1 w-10 border-2 p-2 cursor-pointer ${color} ${borderColor}`} aria-hidden = "true"></i></span>

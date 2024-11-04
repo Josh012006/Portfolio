@@ -133,7 +133,7 @@ function Projects() {
                     A complete social media platform where users can post content and view others&apos; posts. It&apos;s built with Next.js, TypeScript, TailwindCSS for the style and Mongoose(MongoDB) for the database.
                     <br />
                     <br />
-                    This web app uses complex interactions between user, post and comment models in other to display the user&pos;s data and the posts. Like any other social media app, it has a home page where you can see 
+                    This web app uses complex interactions between user, post and comment models in other to display the user&apos;s data and the posts. Like any other social media app, it has a home page where you can see 
                     other people posts, a creation page to add your own, a search page to find your friends and their posts on the app and finally a profile page to manage your account.
                     <br />
                     <br />
