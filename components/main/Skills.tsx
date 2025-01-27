@@ -25,8 +25,10 @@ function Skills () {
         "devicon-mongodb-plain-wordmark colored",
         "devicon-express-original",
         "devicon-react-original-wordmark colored",
+        "devicon-vue-original-wordmark colored",
         "devicon-nodejs-plain-wordmark colored",
         "devicon-nextjs-original-wordmark",
+        "devicon-nuxtjs-original-wordmark colored",
         "devicon-redux-original colored",
         "devicon-mysql-plain-wordmark",
         "devicon-mongoose-original-wordmark colored",
@@ -37,8 +39,6 @@ function Skills () {
         "devicon-github-original-wordmark",
         "devicon-sass-original colored",
         "devicon-postman-plain colored",
-        "devicon-azuresqldatabase-plain",
-        "devicon-json-plain"
 
     ];
 

@@ -56,7 +56,7 @@ function Carousel ({ skills, type, myInterval = 3000 }: { skills:string[], type:
             </div>
             <div className="carousel-buttons">
                 <i className={`fa-solid fa-arrow-left cursor-pointer p-3 mx-2 rounded-full ${buttons}`} aria-hidden="true" onClick={handlePrev}></i>
-                <i className={`fa-solid fa-arrow-right cursor-pointer p-3 mx-2 rounded-full ${buttons}`}aria-hidden="true" onClick={handlePrev}></i>
+                <i className={`fa-solid fa-arrow-right cursor-pointer p-3 mx-2 rounded-full ${buttons}`}aria-hidden="true" onClick={handleNext}></i>
             </div>
         </div>
     );
