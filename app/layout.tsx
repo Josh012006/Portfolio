@@ -22,6 +22,8 @@ export default function RootLayout({
         <link rel="icon" href= "/logo.png" sizes="16x16" />
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         <script src="https://kit.fontawesome.com/f1ed3a95ea.js" crossOrigin="anonymous" defer></script>
+        
+        <meta name="google-site-verification" content="4tEN8VJShNlSjB57RxtFhfTgLN91RRvdAo0yS2O7R-o" />
       </head>
       <ReduxProvider>
         <body>
