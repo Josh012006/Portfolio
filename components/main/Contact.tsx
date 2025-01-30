@@ -99,7 +99,7 @@ function Contact() {
                 <input type="email" placeholder="example@gmail.com" name="email" id="email" className={`rounded-lg p-3 h-10 ${fieldsColor}`} required />
                 <label htmlFor="message" className="my-2">Message</label>
                 <textarea name="message" placeholder="Say Hi!" id="message" className={`rounded-lg p-3 ${fieldsColor}`} required></textarea>
-                <button className={`rounded-lg p-2 mt-5 mx-auto ${fieldsColor} text-base lg:text-lg`} type="submit">Envoyer</button>
+                <button className={`rounded-lg p-3 mt-5 mx-auto ${fieldsColor} flex gap-2 items-center text-base lg:text-lg`} type="submit">Send Message <i className="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
             </form>
         </section>
     )
