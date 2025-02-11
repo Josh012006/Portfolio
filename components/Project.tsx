@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
 
+import { useAppSelector } from "@/redux/store";
 
 
 
@@ -12,10 +13,20 @@ function Project({ children, title, src, poster, github, demo, id } : { children
 
     const [num, setNum] = useState(0);
 
+    const theme = useAppSelector((state) => state.theme).theme;
+    const [buttonColor, setButtonColor] = useState("bg-black");
+
     useEffect(() => {
         const myNum = Math.floor(Math.random() * 5);
         setNum(myNum);
     }, []);
+
+    useEffect(() => {
+        const buttonColor = (theme === "dark") ? 'bg-black' : 'bg-orange-300';
+
+        setButtonColor(buttonColor);
+    }, [theme]);
+
 
 
     return (
@@ -30,8 +41,10 @@ function Project({ children, title, src, poster, github, demo, id } : { children
                     {children}
                 </div>
                 <br />
-                You can find the source code <Link target="_blank" href={github} className="text-blue-700">here</Link>.
-                {demo && <> You can also find the demo <Link target="_blank" href={demo} className="text-blue-700">here</Link>.</>}
+                <div className="flex flex-col lg:flex-row gap-5 items-center">
+                    <Link target="_blank" href={github} className={`${buttonColor} text-center flex items-center justify-around rounded-md p-2`}>Source code</Link>
+                    {demo && <Link target="_blank" href={demo} className={`${buttonColor} text-center flex items-center justify-around rounded-md p-2`}>Demo</Link>}
+                </div>
             </div>
             {(num % 2 == 1) && <video className="rounded-lg m-5" preload="none" poster={poster} controls>
                 <source src={src} type="video/mp4" />

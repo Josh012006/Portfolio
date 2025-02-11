@@ -24,6 +24,12 @@ export default function RootLayout({
         <script src="https://kit.fontawesome.com/f1ed3a95ea.js" crossOrigin="anonymous" defer></script>
         
         <meta name="google-site-verification" content="4tEN8VJShNlSjB57RxtFhfTgLN91RRvdAo0yS2O7R-o" />
+        <meta property="og:title" content="Josué Mongan" />
+        <meta property="og:description" content="Josué Mongan's Portfolio" />
+        <meta property="og:image" content="/logo.png" />
+        <meta property="og:url" content="https://josue-mongan.vercel.app" />
+        <meta property="og:type" content="website" />
+        
       </head>
       <ReduxProvider>
         <body>
