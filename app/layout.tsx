@@ -32,12 +32,12 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
 
 
-        <link rel="preload" as="image" href="/about0.webp" />
-        <link rel="preload" as="image" href="/about1.webp" />
-        <link rel="preload" as="image" href="/about2.webp" />
-        <link rel="preload" as="image" href="/about3.webp" />
-
         <link rel="preload" as="video" href="/home-animation.mp4" />
+
+        <link rel="preload" as="image" href="/about3.webp" />
+        <link rel="preload" as="image" href="/about0.webp" />
+        <link rel="preload" as="image" href="/about2.webp" />
+        <link rel="preload" as="image" href="/about1.webp" />
         
       </head>
       <ReduxProvider>
