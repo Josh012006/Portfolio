@@ -5,6 +5,7 @@ import ReduxProvider from "@/redux/Provider";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import GoUp from "@/components/layout/GoUp";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Josué Mongan",
@@ -21,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href= "/logo.png" sizes="16x16" />
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-        <script src="https://kit.fontawesome.com/f1ed3a95ea.js" crossOrigin="anonymous" defer></script>
+        <Script src="https://kit.fontawesome.com/f1ed3a95ea.js" crossOrigin="anonymous" defer></Script>
         
         <meta name="google-site-verification" content="4tEN8VJShNlSjB57RxtFhfTgLN91RRvdAo0yS2O7R-o" />
         <meta property="og:title" content="Josué Mongan" />
@@ -29,6 +30,12 @@ export default function RootLayout({
         <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://josue-mongan.vercel.app" />
         <meta property="og:type" content="website" />
+
+
+        <link rel="preload" as="image" href="/about0.webp"></link>
+        <link rel="preload" as="image" href="/about1.webp"></link>
+        <link rel="preload" as="image" href="/about2.webp"></link>
+        <link rel="preload" as="image" href="/about3.webp"></link>
         
       </head>
       <ReduxProvider>
