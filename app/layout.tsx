@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import ReduxProvider from "@/redux/Provider";
@@ -47,6 +48,7 @@ export default function RootLayout({
           <GoUp />
           <Footer />
           <Analytics/>
+          <SpeedInsights/>
         </body>
       </ReduxProvider>
     </html>
