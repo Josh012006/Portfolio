@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 import ReduxProvider from "@/redux/Provider";
@@ -45,6 +46,7 @@ export default function RootLayout({
           {children}
           <GoUp />
           <Footer />
+          <Analytics/>
         </body>
       </ReduxProvider>
     </html>
