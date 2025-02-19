@@ -15,7 +15,6 @@ const images = [
     'about0.webp',
     'about1.webp',
     'about2.webp',
-    'about3.webp',
 ];
 
 

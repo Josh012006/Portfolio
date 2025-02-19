@@ -37,7 +37,6 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/about3.webp" />
         <link rel="preload" as="image" href="/about0.webp" />
         <link rel="preload" as="image" href="/about2.webp" />
-        <link rel="preload" as="image" href="/about1.webp" />
         
       </head>
       <ReduxProvider>
