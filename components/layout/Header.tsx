@@ -50,12 +50,12 @@ function Header() {
                 <i className={`${icon} fa-solid absolute right-0 m-5 lg:relative text-2xl col-span-1 lg:col-span-2 w-10 p-2 cursor-pointer ${color}`} aria-hidden = "true" onClick = {() => {dispatch(changeTheme());}}></i>
             </div>
             <nav className={`col-span-12 lg:col-span-7 grid-cols-1 lg:grid lg:grid-cols-6 text-base lg:text-lg text-center items-center mt-3 mb-1 lg:mt-0 lg:mb-0 ${(show)? "grid" : "hidden"}`}>
-                <Link href = "/#home" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative `}>Home</Link>
-                <Link href = "/#about" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative `}>About me</Link>
-                <Link href = "/#skills" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative `}>Skills</Link>
-                <Link href = "/#projects" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative `}>Projects</Link>
-                <Link href = "/experience" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative `}>Experience</Link>
-                <Link href = "/#contact" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative `}>Contact</Link>
+                <Link href = "/#home" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative hover-underline`}>Home</Link>
+                <Link href = "/#about" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative hover-underline`}>About me</Link>
+                <Link href = "/#skills" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative hover-underline`}>Skills</Link>
+                <Link href = "/#projects" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative hover-underline`}>Projects</Link>
+                <Link href = "/experience" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative hover-underline`}>Experience</Link>
+                <Link href = "/#contact" className={`p-2 lg:rounded-t-lg h-full lg:p-4 lg:m-0 relative hover-underline`}>Contact</Link>
             </nav>
         </header>
     );
