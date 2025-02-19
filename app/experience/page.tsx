@@ -31,7 +31,7 @@ function ExperiencePage() {
     return(
         <section id="experience" className={`${bgColor} ${textColor} p-4 min-h-125 flex flex-col items-center`}>
             <h1 className="text-center text-3xl lg:text-4xl py-10">My Experience</h1>
-            <p className="text-center my-2 text-sm lg:text-lg">I&apos;ve had many experiences since I started programming and particularly web development.</p>
+            <p className="text-center my-2 text-sm lg:text-lg">I had the opportunity to learn and to work with many interesting companies since I started diving into computer science and web development.</p>
             <div className="p-0 lg:p-5">
                 <Experience title="Internship in fullstack development at Prodigy InfoTech" logo="prodigyinfotech.png" period="01 August 2024 - 31 August 2024 (1 month)" companyInfos="Prodigy InfoTech(Mumbai - 400018, Maharashta, India)" site="https://prodigyinfotech.dev/" mail="contact@prodigyinfotech.dev">
                     I did a one month internship at Prodigy InfoTech as a remote fullstack web developer. My tasks included the development of: i. a user authentication system with secure login and registration functionality, ii. an employee management system, specifically a web application that allows 
