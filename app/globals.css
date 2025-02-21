@@ -74,6 +74,11 @@ a:hover {
 }
 
 
+* {
+  font-display: swap;
+}
+
+
 
 
 @layer utilities {
