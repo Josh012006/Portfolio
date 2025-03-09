@@ -65,16 +65,16 @@ function About() {
                 <div className={`col-span-1 lg:col-span-3 text-sm lg:text-xl flex flex-col text-justify indent-6 justify-center py-5 px-5 lg:px-11`}>
                     <h1 className={`text-center text-3xl lg:text-4xl my-10 ${font.className}`}>About me</h1>
                     <p>
-                        Hello again😁, I&apos;m Josué Mongan, a passionate and dedicated MERN full-stack web developer and
-                        self-taught C++ enthusiast. Thanks God, my journey in programming began in high school. And ever
-                        since, I have been driven by a relentless curiosity to delve deeper into the vast world
-                        of computer science.
+                        I&apos;m a software developer passionate about engineering and tech in general. Thanks God, 
+                        my journey in programming began in high school. And ever since, I have been driven by a relentless 
+                        curiosity to delve deeper into the vast world of computer science.
                     </p>
                     <br/>
                     <p >
+                        I have a wide range of skills, be it in web development, data structures and programming in general.
                         With a solid foundation in the MERN stack—comprising MongoDB, Express.js, React, and Node.js—I
                         have developed a keen ability to build robust, scalable, and user-friendly web🌐 applications.
-                        My expertise in C++ further complements my skill set, allowing me to tackle complex algorithms
+                        My expertise in C++ and Java further complements my skill set, allowing me to tackle complex algorithms
                         and performance-critical applications with confidence and precision.
                     </p>
                     <br />
@@ -85,7 +85,8 @@ function About() {
                     </p>
                     <br />
                     <p>
-                        When I&apos;m not coding, you can find me immersing myself in a good book📚 or playing video games. I am also an avid jazz and gospel music lover and enjoy playing piano🎹 in my spare time.
+                        When I&apos;m not coding, you can find me immersing myself in a good book📚 or playing video games. 
+                        I am also an avid jazz and gospel music lover and enjoy playing piano🎹 in my spare time.
                     </p>
                     <br />
                     <br />
