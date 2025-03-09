@@ -30,7 +30,7 @@ function Home() {
             <div className="p-3 text-white min-w-full absolute top-0 left-0 min-h-full flex flex-col text-center justify-center">
                 <h1 className = "text-base lg:text-3xl lg:my-2">Hi, I&apos;m <span>Josué MONGAN</span></h1>
                 <p className={`${font.className} text-xl lg:text-3xl m-2 lg:m-3`}>Welcome to the place where Imagination is turned into Reality, where Simplicity underlines Amazing Ideas.</p>
-                <p className="whitespace-normal m-2 lg:m-5 text-sm lg:text-2xl font-bold">Software Developer | Passionate of engineering | AI enthusiast</p>
+                <p className="whitespace-normal m-2 lg:m-5 text-sm lg:text-2xl font-bold">Software Developer | Passionate about engineering | AI enthusiast</p>
             </div>
             <video className="absolute top-0 left-0 min-w-full min-h-full -z-10" autoPlay muted loop>
                 <source src="/home-animation.mp4" type="video/mp4" />
