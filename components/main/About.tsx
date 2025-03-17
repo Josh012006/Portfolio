@@ -86,6 +86,7 @@ function About() {
                     <br />
                     <p>
                         When I&apos;m not coding, you can find me immersing myself in a good book📚 or playing video games. 
+                        I&apos;m a christian always trying to introduce 👑 Jesus&apos;s peace and love everywhere I go. 
                         I am also an avid jazz and gospel music lover and enjoy playing piano🎹 in my spare time.
                     </p>
                     <br />
