@@ -42,7 +42,7 @@ export default function RootLayout({
         
       </head>
       <ReduxProvider>
-        <body>
+        <body className="general-bg">
           <Header />
           {children}
           <GoUp />

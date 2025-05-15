@@ -20,7 +20,7 @@ function ExperiencePage() {
 
 
     useEffect(() => {
-        const bgColor = (theme === "dark") ? 'bg-zinc-900' : 'bg-orange-50';
+        const bgColor = (theme === "dark") ? 'bg-zinc-900 section-dark' : 'bg-orange-50 section-light';
         const textColor = (theme === "dark") ? 'text-white' : 'text-black';
 
         setTextColor(textColor);

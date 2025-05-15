@@ -34,7 +34,7 @@ function About() {
 
 
     useEffect(() => {
-        const aboutSection = (theme === "dark") ? 'bg-zinc-900 text-white' : 'bg-orange-50 text-black';
+        const aboutSection = (theme === "dark") ? 'bg-zinc-900 text-white section-dark' : 'bg-orange-50 text-black section-light';
         const aboutDiv = (theme === "dark") ? 'bg-zinc-800' : 'bg-orange-100';
         const textDiv = (theme === "dark") ? 'lg:shadow-custom' : 'lg:shadow-custom-1';
         const buttonColor = (theme === "dark") ? 'bg-black' : 'bg-orange-300';

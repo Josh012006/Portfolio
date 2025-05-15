@@ -25,7 +25,7 @@ function Contact() {
 
 
     useEffect(() => {
-        const bgColor = (theme === "dark") ? 'bg-zinc-900' : 'bg-orange-50';
+        const bgColor = (theme === "dark") ? 'bg-zinc-900 section-dark' : 'bg-orange-50 section-light';
         const textColor = (theme === "dark") ? 'text-white' : 'text-black';
         const section = (theme === "dark") ? 'bg-zinc-800' : 'bg-orange-100';
         const loader = (theme === "dark") ? '#fff' : '#000';
