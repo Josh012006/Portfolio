@@ -92,7 +92,8 @@ function Contact() {
             {loading && <div className="flex justify-center items-center p-3">
                 <Loader color={loader} size={40} />
             </div>}
-            <form id="contactForm" className={`${section} text-base lg:text-lg my-10 min-h-96 rounded-lg w-11/12 lg:w-2/6 p-9 flex flex-col `} onSubmit = {handleSubmit}>
+            {/* onSubmit = {handleSubmit} */}
+            <form id="contactForm" className={`${section} text-base lg:text-lg my-10 min-h-96 rounded-lg w-11/12 lg:w-2/6 p-9 flex flex-col `}> 
                 <label htmlFor="name" className="my-2">Name</label>
                 <input type="text" placeholder="John Doe" name="name" id="name" className={`rounded-lg p-3 h-10 ${fieldsColor}`} required />
                 <label htmlFor="email" className="my-2">Email</label>
