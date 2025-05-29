@@ -40,7 +40,9 @@ function Contact() {
 
 
     // !TODO: Take care of spaming
-    const handleSubmit = () => {}
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+    }
 
     const handleSubmit1 = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
