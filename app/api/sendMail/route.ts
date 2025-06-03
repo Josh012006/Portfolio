@@ -19,10 +19,17 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const mailOptions = {
             from: email,
             to: 'josuesmjr.mongan@gmail.com',
+            replyTo: email,
             subject: `Message from ${name} (${email}) in Portfolio`,
             text: 
             `
             ${message}
+            `,
+            html: `
+                <p>Vous avez reçu un message depuis le formulaire de contact :</p>
+                <p><strong>De :</strong> ${email}</p>
+                <p><strong>Message :</strong></p>
+                <p>${message.replace(/\n/g, '<br>')}</p>
             `
         };
     
