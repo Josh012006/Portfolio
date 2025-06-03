@@ -18,6 +18,7 @@ function Contact() {
     const [fieldsColor, setFieldsColor] = useState('bg-zinc-900 placeholder:text-gray-300');
 
     const [error, setError] = useState('');
+    const [warning, setWarning] = useState('');
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -39,12 +40,7 @@ function Contact() {
     }, [theme]);
 
 
-    // !TODO: Take care of spaming
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-    }
-
-    const handleSubmit1 = async(e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         setError('');
@@ -75,7 +71,12 @@ function Contact() {
                     setSuccess(false);
                 }, 3000);
             } else {
-                setError(data.message);
+                setLoading(false);
+                if (response.status === 429) {
+                    setWarning(data.message);
+                } else {
+                    setError(data.message);
+                }
             }
 
         } catch (error) {
@@ -92,6 +93,7 @@ function Contact() {
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>Let&apos;s connect</h1>
             <p className="p-2 text-base lg:text-xl text-center">Happy you came all the way down 🥳. I would be glad to connect with you. So why not leave your impression of the website. Have a nice day!</p>
             {error && <p className="text-center text-red-500 bg-red-200 border-2 border-red-500 p-3 rounded-lg">{error}</p>}
+            {warning && <p className="text-center text-yellow-500 bg-yellow-200 border-2 border-yellow-500 p-3 rounded-lg">{warning}</p>}
             {success && <p className="text-center text-green-500 bg-green-200 border-2 border-green-500 p-3 rounded-lg">Email sent successfully!</p>}
             {loading && <div className="flex justify-center items-center p-3">
                 <Loader color={loader} size={40} />
