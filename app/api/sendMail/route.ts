@@ -5,7 +5,7 @@ import { kv } from "@vercel/kv";
 
 const ratelimit = new Ratelimit ({
     redis: kv,
-    limiter: Ratelimit.slidingWindow(5, '60s')
+    limiter: Ratelimit.slidingWindow(5, '900s')
 });
 
 
@@ -19,7 +19,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const { limit, reset, remaining } = await ratelimit.limit(ip);
 
         if (remaining === 0) {
-            return new Response(JSON.stringify({ error: 'Rate limit exceeded! Try again later!' }), {
+            return Response.json({ error: 'Rate limit exceeded! Try again later!' }, {
                 status: 429,
                 headers: {
                     'X-RateLimit-Limit': limit. toString(),
