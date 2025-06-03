@@ -19,7 +19,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const { limit, reset, remaining } = await ratelimit.limit(ip);
 
         if (remaining === 0) {
-            return Response.json({ error: 'Rate limit exceeded! Try again later!' }, {
+            return Response.json({ message: 'Rate limit exceeded! Try again later!' }, {
                 status: 429,
                 headers: {
                     'X-RateLimit-Limit': limit. toString(),
