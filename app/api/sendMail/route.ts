@@ -6,12 +6,7 @@ import { kv } from "@vercel/kv";
 const ratelimit = new Ratelimit ({
     redis: kv,
     limiter: Ratelimit.slidingWindow(5, '60s')
-})
-
-
-export const config = {
-    runtime: 'edge',
-}
+});
 
 
 
