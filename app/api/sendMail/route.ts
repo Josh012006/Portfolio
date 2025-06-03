@@ -10,6 +10,7 @@ const ratelimit = new Ratelimit ({
 
 
 
+
 export async function POST(req: NextRequest, res: NextResponse) {
     try {
         const { name, email, message } = await req.json();
