@@ -14,19 +14,19 @@ const ratelimit = new Ratelimit ({
 export async function POST(req: NextRequest, res: NextResponse) {
     try {
         const { name, email, message } = await req.json();
-        const ip = req.ip ?? '127.0.0.1';
+        // const ip = req.ip ?? '127.0.0.1';
 
-        const { limit, reset, remaining } = await ratelimit.limit(ip);
-
-        if (remaining === 0) {
-            return Response.json({ message: 'Rate limit exceeded! Try again later!' }, {
-                status: 429,
-                headers: {
-                    'X-RateLimit-Limit': limit. toString(),
-                    'X-RateLimit-Remaining': remaining. toString(),
-                    'X-RateLimit-Reset': reset. toString(),
-                }
-            })
+        // const { limit, reset, remaining } = await ratelimit.limit(ip);
+        // remaining === 0
+        if (false) {
+            // return Response.json({ message: 'Rate limit exceeded! Try again later!' }, {
+            //     status: 429,
+            //     headers: {
+            //         'X-RateLimit-Limit': limit. toString(),
+            //         'X-RateLimit-Remaining': remaining. toString(),
+            //         'X-RateLimit-Reset': reset. toString(),
+            //     }
+            // })
         } else {
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
@@ -46,10 +46,12 @@ export async function POST(req: NextRequest, res: NextResponse) {
                 ${message}
                 `,
                 html: `
-                    <p>Vous avez reçu un message depuis le formulaire de contact :</p>
-                    <p><strong>De :</strong> ${email}</p>
-                    <p><strong>Message :</strong></p>
-                    <p>${message.replace(/\n/g, '<br>')}</p>
+                    <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+                        <p style="font-weight: bold;">Vous avez reçu un message depuis le formulaire de contact :</p>
+                        <p><strong>De :</strong> <span style="color: #0056b3;">${email}</span></p>
+                        <p><strong>Message :</strong></p>
+                        <p style="line-height: 1.5;">${message.replace(/\n/g, '<br>')}</p>
+                    </div>
                 `
             };
         
