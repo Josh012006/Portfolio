@@ -47,7 +47,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
                 `,
                 html: `
                     <div style="display: flex; justify-content: center; align-content: center;">
-                        <div style="max-width: 500px; font-family: Times New Roman; font-size: 16px; color: #333; background-color: #F8F8F8; border-radius: 7px; margin: auto; padding: 15px 25px;">
+                        <div style="max-width: 350px; font-family: Times New Roman; font-size: 16px; color: #333; background-color: #F8F8F8; border-radius: 7px; margin: auto; padding: 15px 25px;">
                             <h3 style="text-align: center;">Vous avez reçu un message depuis le formulaire de contact :</h3>
                             <p>De : <span style="color: #0056b3; text-decoration: none;">${email}</span></p>
                             <h4>Message :</h4>
