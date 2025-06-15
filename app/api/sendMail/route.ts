@@ -46,7 +46,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
                 ${message}
                 `,
                 html: `
-                    <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+                    <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333; background-color: #eee; border-radius: 7px; text-align: center;">
                         <p style="font-weight: bold;">Vous avez reçu un message depuis le formulaire de contact :</p>
                         <p><strong>De :</strong> <span style="color: #0056b3;">${email}</span></p>
                         <p><strong>Message :</strong></p>
