@@ -22,6 +22,7 @@ function Skills () {
         "typescript/typescript-original",
         "cplusplus/cplusplus-original",
         "c/c-original",
+        "java/java-original-wordmark",
         "haskell/haskell-original",
         "python/python-original",
         "nodejs/nodejs-original-wordmark",

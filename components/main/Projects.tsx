@@ -15,12 +15,12 @@ const font = Caveat({ subsets: ["latin"], weight: '400' });
 
 
 const projects = [
-    'Weather App',
     'Tech Company Website',
     'C++ Task Manager',
     'Social Media Website',
     'Coffee Shop Website',
     'Health Appointment',
+    'MaVille'
 ];
 
 
@@ -73,7 +73,7 @@ function Projects() {
                 <div className={`min-h-125 rounded-lg m-3 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat`} style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/projects/g${selectedProject}.webp')`}}>
                     <h2 className={`text-center text-sm text-white italic`}>{projects[selectedProject]}</h2>
                     <div className="flex flex-col lg:flex-row items-center justify-center my-28">
-                        {projects && projects.map((project, index) => {
+                        {projects && projects.map((_, index) => {
                             return <div key={index} className={`flex justify-center items-center lg:flex-col transform smooth-translate ${(selectedProject === index)? "-translate-x-10 lg:-translate-y-14 lg:-translate-x-0" : ""}`}>
                                 <Link href={`/#ming${index}`} className="m-1 rounded-sm w-28 h-4 lg:w-4 lg:h-40 bg-cover bg-no-repeat bg-center cursor-pointer" style={{backgroundImage: `url('/projects/ming${index}.webp')`}} onMouseEnter={() => {setSelectedProject(index)}}></Link>
                                 <span className={`border-white border rounded-full w-2 h-2 ${(selectedProject === index)? "block" : "hidden"}`}></span>
@@ -89,24 +89,7 @@ function Projects() {
                 so go check the github and leave a star💫 if possible!
             </p>
             <div className="p-0 lg:p-5">
-                <Project id="ming0" title="Weather App" src="/projects/videos/weather.mp4" github="https://github.com/Josh012006/Weather-App" poster="/projects/g0.webp">
-                    A simple JavaScript based web app that helps you see the weather ⛅.
-                    <br />
-                    <br />
-                    It makes usage of two APIs: one to fetch the country code and another for the weather informations.
-                    It displays a solid use of JavaScript and the DOM but also a good understanding of network requests and
-                    asynchronous programming.
-                    <br />
-                    During this project I&apos;ve learned how to use APIs and how to handle the data they send back. I&apos;ve also
-                    learned how to use the DOM to display the data in a user-friendly way.
-                    <br />
-                    <br />
-                    I&apos;ve struggled😅 a bit to find a good way to display the weather data and managing the restrictions for the search bar.
-                    But I&apos;ve managed to do it and I&apos;m really proud of the result. It&apos;s a really simple app but I think it really makes a
-                    solid use of the basic technologies.
-                </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming1" title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g1.webp" demo="https://techmasters-delta.vercel.app/">
+                <Project id="ming0" title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g0.webp" demo="https://techmasters-delta.vercel.app/">
                     Modest website for selling products coded mainly using Express and Handlebars. It&apos;s really simple 😄.
                     <br />
                     <br />
@@ -119,7 +102,7 @@ function Projects() {
                     the design of the website.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming2" title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g2.webp">
+                <Project id="ming1" title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g1.webp">
                     Simple tasks manager wrote in C++. I haven&apos;t done the GUI yet so it runs in the terminal.
                     But I plan to do it with Qt.
                     <br />
@@ -132,7 +115,7 @@ function Projects() {
                     But there will be an app version done with Qt in the near future.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming3" title="Social Media Website" src="/projects/videos/social-media.mp4" github="https://github.com/Josh012006/PRODIGY_FS_05" poster="/projects/g3.webp">
+                <Project id="ming2" title="Social Media Website" src="/projects/videos/social-media.mp4" github="https://github.com/Josh012006/PRODIGY_FS_05" poster="/projects/g2.webp">
                     A complete social media platform where users can post content and view others&apos; posts. It&apos;s built with Next.js, TypeScript, TailwindCSS for the style and Mongoose(MongoDB) for the database.
                     <br />
                     <br />
@@ -144,7 +127,7 @@ function Projects() {
                     using referencing and embedding in MongoDB. I&apos;m really proud of the result and I think it&apos;s a really good project to show my skills in web development.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming4" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g4.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
+                <Project id="ming3" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g3.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
                     Le Café du Coin is a demonstration website for a café, built with React via create-react-app. This project showcases the key features of a modern showcase 
                     site, offering an intuitive, responsive user interface.
                     <br />
@@ -153,7 +136,7 @@ function Projects() {
                     or showcase site development.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming5" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g5.webp" demo="https://health-appointment.vercel.app/">
+                <Project id="ming4" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g4.webp" demo="https://health-appointment.vercel.app/">
                     An appointment app made with Next.js and TailwindCSS. It&apos;s the greatest project I&apos;ve worked on till now.
                     <br />
                     <br />
@@ -163,6 +146,19 @@ function Projects() {
                     <br />
                     <br />
                     The part where I struggled the most is the management of the security and the restrictions on the app. It was really challenging to imagine all the cases and the possibilities to try to avoid disorder and attacks.
+                </Project>
+                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <Project id="ming5" title="MaVille" src="/projects/videos/maville.mp4" github="https://github.com/Josh012006/IFT2255-ma-ville-bugbusters" poster="/projects/g5.webp">
+                    An app MaVille to help the city of Montreal manage the public works more efficiently. It uses Java for the backend with a Javalin Server, React for the frontend and Morphia (MongoDB) for the database management.
+                    <br />
+                    <br />
+                    This project was realised with a group of friends in the context of our software engineering course. Like previously said, it is an app to help residents, building firms and the STPM (management service for public works in Montreal) communicate well. 
+                    The resident declares a problem and provides the necessary informations such as the place and a description. Once the declaration is validated by an STPM agent, the providers can then apply to solve it and provide a budget for their project. The agent the confirms the project and
+                    a notification is sent to all the residents that can be impacted by the new project.
+                    Moreover, the app provides real-time updates regarding the ongoing project to help Montreal city&apos;s residents be better prepared.
+                    <br />
+                    <br />
+                    It was my first time building a backend in Java and also using Morphia, so at first it was a bit of a challenge. But it ended in a beautiful experience. It helped us follow the formal steps involved in building a software, going from the UML diagrams to the implementation of the code, without forgetting the tests with JUnit. It also helped me practice the layered architecture one more time while introducing me to peer-to-peer architecture.
                 </Project>
             </div>
             <p className="p-4 flex flex-col items-center justify-center gap-3 text-center text-sm lg:text-xl">

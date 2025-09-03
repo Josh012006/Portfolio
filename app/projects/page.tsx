@@ -35,6 +35,23 @@ function ProjectsPage() {
             <h1 className="text-center text-3xl lg:text-4xl py-10">Other Projects</h1>
             <p className="text-center my-2">Apart from my main projects presented on my home page, here are some of my other projects.</p>
             <div className="my-3">
+                <Project id="ming9" title="Weather App" src="/projects/videos/weather.mp4" github="https://github.com/Josh012006/Weather-App" poster="/projects/g9.webp">
+                    A simple JavaScript based web app that helps you see the weather ⛅.
+                    <br />
+                    <br />
+                    It makes usage of two APIs: one to fetch the country code and another for the weather informations.
+                    It displays a solid use of JavaScript and the DOM but also a good understanding of network requests and
+                    asynchronous programming.
+                    <br />
+                    During this project I&apos;ve learned how to use APIs and how to handle the data they send back. I&apos;ve also
+                    learned how to use the DOM to display the data in a user-friendly way.
+                    <br />
+                    <br />
+                    I&apos;ve struggled😅 a bit to find a good way to display the weather data and managing the restrictions for the search bar.
+                    But I&apos;ve managed to do it and I&apos;m really proud of the result. It&apos;s a really simple app but I think it really makes a
+                    solid use of the basic technologies.
+                </Project>
+                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming6" title="Simple online store for games" src="/projects/videos/oop.mp4" github="https://github.com/Josh012006/OOP" poster="/projects/g6.webp">
                     This is a very primitive e commerce website. It is done using the basic languages like HTML, CSS and JS(with the DOM).
                     <br/>
