@@ -43,7 +43,7 @@ function Project({ children, title, src, poster, github, demo, id } : { children
                 <br />
                 <div className="flex flex-col lg:flex-row gap-5 items-center">
                     <Link target="_blank" href={github} className={`${buttonColor} text-center flex items-center justify-around rounded-md p-2`}>Source code</Link>
-                    {demo && <Link target="_blank" href={demo} className={`${buttonColor} text-center flex items-center justify-around rounded-md p-2`}>Demo</Link>}
+                    {demo && <Link target="_blank" href={demo} className={`${buttonColor} text-center flex items-center justify-around rounded-md p-2`}>Live Demo</Link>}
                 </div>
             </div>
             {(num % 2 == 1) && <video className="rounded-lg m-5" preload="none" poster={poster} controls>

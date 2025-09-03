@@ -148,8 +148,8 @@ function Projects() {
                     The part where I struggled the most is the management of the security and the restrictions on the app. It was really challenging to imagine all the cases and the possibilities to try to avoid disorder and attacks.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming5" title="MaVille" src="/projects/videos/maville.mp4" github="https://github.com/Josh012006/IFT2255-ma-ville-bugbusters" poster="/projects/g5.webp">
-                    An app MaVille to help the city of Montreal manage the public works more efficiently. It uses Java for the backend with a Javalin Server, React for the frontend and Morphia (MongoDB) for the database management.
+                <Project id="ming5" title="MaVille" src="/projects/videos/maville.mp4" github="https://github.com/Josh012006/IFT2255-ma-ville-bugbusters" poster="/projects/g5.webp" demo="https://ift-2255-ma-ville-bugbusters.vercel.app/">
+                    An app MaVille to help the city of Montreal manage the public works more efficiently. It uses Java for the backend with a Javalin Server, React for the frontend and Morphia (MongoDB) for the database management. The app is also made to be responsive.
                     <br />
                     <br />
                     This project was realised with a group of friends in the context of our software engineering course. Like previously said, it is an app to help residents, building firms and the STPM (management service for public works in Montreal) communicate well. 
