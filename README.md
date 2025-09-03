@@ -4,11 +4,11 @@ This one is also built in Next.js. It has every part of a standard Web Dev Portf
 
 ## How to use it
 If it seems interesting to you, you can just clone it.
-Don't forget to run
-**npm i**
-You must also give in the .env
-EMAIL_PASSWORD= 
-for the contact part, the route to send mail.
+Don't forget to run :
+```bash
+    npm i
+```
+You must also give in the .env `EMAIL_PASSWORD=` for the contact part, the route to send mail.
 
 You can run the project with **npm run dev** and modify it as you see fit.
 
