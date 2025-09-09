@@ -136,7 +136,7 @@ function Projects() {
                     or showcase site development.
                 </Project>
                 <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming4" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g4.webp" demo="https://health-appointment.vercel.app/">
+                <Project id="ming4" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g4.webp"> {/* todo: Add a specific user for the tests demo="https://health-appointment.vercel.app/" */}
                     An appointment app made with Next.js and TailwindCSS. It&apos;s the greatest project I&apos;ve worked on till now.
                     <br />
                     <br />
