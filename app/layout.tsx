@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+// @ts-ignore: allow importing global CSS without type declarations
 import "./globals.css";
 import ReduxProvider from "@/redux/Provider";
 import Header from "@/components/layout/Header";
@@ -36,9 +37,7 @@ export default function RootLayout({
 
         <link rel="preload" as="video" href="/home-animation.mp4" />
 
-        <link rel="preload" as="image" href="/about3.webp" />
         <link rel="preload" as="image" href="/about0.webp" />
-        <link rel="preload" as="image" href="/about2.webp" />
         
       </head>
       <ReduxProvider>

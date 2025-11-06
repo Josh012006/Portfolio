@@ -13,8 +13,6 @@ const font = Caveat({ subsets: ["latin"], weight: '400' });
 
 const images = [
     'about0.webp',
-    'about1.webp',
-    'about2.webp',
 ];
 
 
@@ -29,8 +27,6 @@ function About() {
 
     const [buttonColor, setButtonColor] = useState("bg-black");
 
-    const [currentImage, setCurrentImage] = useState(0);
-    const [animation, setAnimation] = useState("");
 
 
     useEffect(() => {
@@ -45,23 +41,12 @@ function About() {
         setTextDiv(textDiv);
     }, [theme]);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-            setAnimation('animate-fade-out');
-            setTimeout(() => {
-                setAnimation('');
-            }, 2000);
-        }, 5000);
-    
-        return () => clearInterval(interval);
-    }, []);
 
 
     return(
         <section className={`min-h-125 py-8 flex justify-center items-center ${aboutSection} `} id="about">
             <div className={`grid grid-cols-1 lg:grid-cols-5 ${aboutDiv} rounded-lg min-h-96 w-11/12 lg:w-5/6`}>
-                <div className={`col-span-1 lg:col-span-2 min-h-96 about-photo lg:min-h-125 bg-cover bg-no-repeat bg-center rounded-t-lg lg:!rounded-l-lg lg:rounded-t-0 relative ${textDiv} ${animation}`} style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/${images[currentImage]}')`}}></div>
+                <div className={`col-span-1 lg:col-span-2 min-h-96 about-photo lg:min-h-125 bg-cover bg-no-repeat bg-center rounded-t-lg lg:!rounded-l-lg lg:rounded-t-0 relative ${textDiv}`} style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/about0.webp')`}}></div>
                 <div className={`col-span-1 lg:col-span-3 text-sm lg:text-xl flex flex-col text-justify indent-6 justify-center py-5 px-5 lg:px-11`}>
                     <h1 className={`text-center text-3xl lg:text-4xl my-10 ${font.className}`}>About me</h1>
                     <p>
