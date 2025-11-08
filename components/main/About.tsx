@@ -46,31 +46,32 @@ function About() {
     return(
         <section className={`min-h-125 py-8 flex justify-center items-center ${aboutSection} `} id="about">
             <div className={`grid grid-cols-1 lg:grid-cols-5 ${aboutDiv} rounded-lg min-h-96 w-11/12 lg:w-5/6`}>
-                <div className={`col-span-1 lg:col-span-2 min-h-96 about-photo lg:min-h-125 bg-cover bg-no-repeat bg-center rounded-t-lg lg:!rounded-l-lg lg:rounded-t-0 relative ${textDiv}`} style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/about0.webp')`}}></div>
+                <div className={`col-span-1 lg:col-span-2 min-h-96 about-photo lg:min-h-125 bg-no-repeat bg-center rounded-t-lg lg:!rounded-l-lg lg:rounded-t-0 relative ${textDiv}`} style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/about0.webp')`}}></div>
                 <div className={`col-span-1 lg:col-span-3 text-sm lg:text-xl flex flex-col text-justify indent-6 justify-center py-5 px-5 lg:px-11`}>
                     <h1 className={`text-center text-3xl lg:text-4xl my-10 ${font.className}`}>About me</h1>
                     <p>
-                        I&apos;m a software developer passionate about engineering and tech in general. Thanks God, 
+                        I&apos;m a software developer passionate about engineering and automation. Thanks God, 
                         my journey in programming began in high school. And ever since, I have been driven by a relentless 
                         curiosity to delve deeper into the vast world of computer science.
                     </p>
                     <br/>
                     <p >
-                        I have a wide range of skills, be it in web development, data structures and programming in general.
+                        I have a wide range of skills, from problem-solving to algorithmic thinking and advanced programming, 
+                        enabling me to design efficient solutions.
                         With a solid foundation in the MERN stack—comprising MongoDB, Express.js, React, and Node.js—I
-                        have developed a keen ability to build robust, scalable, and user-friendly web🌐 applications.
+                        have developed a keen ability to build robust, scalable, and user-friendly web applications.
                         My expertise in C++ and Java further complements my skill set, allowing me to tackle complex algorithms
                         and performance-critical applications with confidence and precision.
                     </p>
                     <br />
                     <p>
                         I thrive on challenges and am always eager to expand my knowledge, staying abreast of the latest
-                        technological advancements💻 and industry best practices. My goal is to continue growing as a
+                        technological advancements and industry best practices. My goal is to continue growing as a
                         developer, contributing to innovative projects, and making a meaningful impact through my work.
                     </p>
                     <br />
                     <p>
-                        When I&apos;m not coding, you can find me immersing myself in a good book📚 or playing video games. 
+                        When I&apos;m not coding, you can find me immersing myself in a good book or playing video games. 
                         I&apos;m a christian always trying to introduce 👑 Jesus&apos;s peace and love everywhere I go. 
                         I am also an avid jazz and gospel music lover and enjoy playing piano🎹 in my spare time.
                     </p>

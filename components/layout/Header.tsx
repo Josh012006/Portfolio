@@ -29,7 +29,7 @@ function Header() {
         const bg = (theme === "dark") ? 'black' : '#ffedd5';
         const color = (theme === "dark") ? 'text-white' : 'text-black';
         const borderColor = (theme === "dark") ? 'border-white' : 'border-black';
-        const icon = (theme === "dark") ? 'fa-moon' : 'fa-sun';
+        const icon = (theme === "dark") ? 'fa-sun' : 'fa-moon';
 
         const hover = (theme === "dark") ? 'hover:bg-zinc-900 lg:hover:border-b-2 lg:hover:border-b-white' : 'hover:bg-orange-200 lg:hover:border-b-2 lg:hover:border-b-black';
 
