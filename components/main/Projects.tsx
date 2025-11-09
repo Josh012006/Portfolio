@@ -1,7 +1,6 @@
 "use client"
 
 
-import { useAppSelector } from "@/redux/store";
 import { useEffect, useState } from "react";
 
 import Project from "../Project";
@@ -28,29 +27,6 @@ const projects = [
 
 function Projects() {
 
-    // * Managing the theme changes
-    const [bgColor, setBgColor] = useState('bg-zinc-900');
-    const [textColor, setTextColor] = useState('text-white');
-    const [borderColor, setBorderColor] = useState('border-white');
-    const [buttonColor, setButtonColor] = useState("bg-black");
-
-    const theme = useAppSelector((state) => state.theme).theme;
-
-
-    useEffect(() => {
-        const bgColor = (theme === "dark") ? 'bg-zinc-900 section-dark' : 'bg-orange-50 section-light';
-        const textColor = (theme === "dark") ? 'text-white' : 'text-black';
-        const borderColor = (theme === "dark") ? 'border-white' : 'border-black';
-        const buttonColor = (theme === "dark") ? 'bg-black' : 'bg-orange-300';
-
-        setTextColor(textColor);
-        setBgColor(bgColor);
-        setBorderColor(borderColor);
-        setButtonColor(buttonColor);
-    }, [theme]);
-
-
-
     const [selectedProject, setSelectedProject] = useState(0);
 
 
@@ -67,9 +43,9 @@ function Projects() {
 
 
     return (
-        <section id="projects" className={`${bgColor} ${textColor} p-4 min-h-125 flex flex-col items-center`}>
+        <section id="projects" className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>Projects</h1>
-            <div className={`min-h-125 my-16 mx-5 w-full lg:w-4/6 rounded-lg border-2 ${borderColor} relative bg-transparent`}>
+            <div className={`min-h-125 my-16 mx-5 w-full lg:w-4/6 rounded-lg border-2 border-black dark:border-white relative bg-transparent`}>
                 <div className={`min-h-125 rounded-lg m-3 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat`} style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/projects/g${selectedProject}.webp')`}}>
                     <h2 className={`text-center text-sm text-white italic`}>{projects[selectedProject]}</h2>
                     <div className="flex flex-col lg:flex-row items-center justify-center my-28">
@@ -101,7 +77,7 @@ function Projects() {
                     the data. It really gave me a good understanding of routes definition and middlewares. I&apos;m also really proud of
                     the design of the website.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming1" title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g1.webp">
                     Simple tasks manager wrote in C++. I haven&apos;t done the GUI yet so it runs in the terminal.
                     But I plan to do it with Qt.
@@ -114,7 +90,7 @@ function Projects() {
                     someone with some knowledge of C++ and STL. For the time being it only works in the Terminal.
                     But there will be an app version done with Qt in the near future.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming2" title="Social Media Website" src="/projects/videos/social-media.mp4" github="https://github.com/Josh012006/PRODIGY_FS_05" poster="/projects/g2.webp">
                     A complete social media platform where users can post content and view others&apos; posts. It&apos;s built with Next.js, TypeScript, TailwindCSS for the style and Mongoose(MongoDB) for the database.
                     <br />
@@ -126,7 +102,7 @@ function Projects() {
                     The project really helped me dive deeper into state management in React and in Next.js. I&apos;ve also had the opportunity to deal with complex models and data structures,
                     using referencing and embedding in MongoDB. I&apos;m really proud of the result and I think it&apos;s a really good project to show my skills in web development.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming3" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g3.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
                     Le Café du Coin is a demonstration website for a café, built with React via create-react-app. This project showcases the key features of a modern showcase 
                     site, offering an intuitive, responsive user interface. It was built as part of a group challenge with some of my peers.
@@ -135,7 +111,7 @@ function Projects() {
                     The used technologies are React and TailwindCSS. This project demonstrates my ability to create modern, attractive web applications, essential for any commercial 
                     or showcase site development.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming4" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g4.webp"> {/* todo: Add a specific user for the tests demo="https://health-appointment.vercel.app/" */}
                     An appointment app made with Next.js and TailwindCSS. It&apos;s the greatest project I&apos;ve worked on till now.
                     <br />
@@ -147,7 +123,7 @@ function Projects() {
                     <br />
                     The part where I struggled the most is the management of the security and the restrictions on the app. It was really challenging to imagine all the cases and the possibilities to try to avoid disorder and attacks.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming5" title="MaVille" src="/projects/videos/maville.mp4" github="https://github.com/Josh012006/IFT2255-ma-ville-bugbusters" poster="/projects/g5.webp" demo="https://ift-2255-ma-ville-bugbusters.vercel.app/">
                     An app MaVille to help the city of Montreal manage the public works more efficiently. It uses Java for the backend with a Javalin Server, React for the frontend and Morphia (MongoDB) for the database management. The app is also made to be responsive.
                     <br />
@@ -163,7 +139,7 @@ function Projects() {
             </div>
             <p className="p-4 flex flex-col items-center justify-center gap-3 text-center text-sm lg:text-xl">
                 Those are only a part of my projects. You can see more here.
-                <Link target="_blank" href='/projects' className={`${buttonColor} text-center flex items-center justify-around rounded-md p-4`}>Other projects</Link>
+                <Link target="_blank" href='/projects' className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-4`}>Other projects</Link>
             </p>
         </section>
     )

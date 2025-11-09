@@ -1,8 +1,5 @@
 "use client"
 
-import { useAppSelector } from "@/redux/store";
-import { useEffect, useState } from "react";
-
 import Carousel from "../Carousel";
 
 
@@ -65,36 +62,19 @@ function Skills () {
     ];
 
 
-    const [bgColor, setBgColor] = useState('bg-zinc-900');
-    const [textColor, setTextColor] = useState('text-white');
-    const [carouselColor, setCarouselColor] = useState('bg-zinc-800');
-
-    const theme = useAppSelector((state) => state.theme).theme;
-
-    useEffect(() => {
-        const bgColor = (theme === "dark") ? 'bg-zinc-900 section-dark' : 'bg-orange-50 section-light';
-        const textColor = (theme === "dark") ? 'text-white' : 'text-black';
-        const carouselColor = (theme === "dark") ? 'bg-zinc-800' : 'bg-orange-100';
-
-        setCarouselColor(carouselColor);
-        setTextColor(textColor);
-        setBgColor(bgColor);
-    }, [theme]);
-
-
 
     return (
-        <section id="skills"  className={`${bgColor} ${textColor} py-4 min-h-125`}>
+        <section id="skills"  className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white py-4 min-h-125`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>My Skills</h1>
             <div className="py-3">
-                <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 ${textColor}`}>Hard Skills</h2>
-                <div className={`${carouselColor} w-full min-h-64`}>
+                <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 text-black dark:text-white`}>Hard Skills</h2>
+                <div className={`bg-orange-100 dark:bg-zinc-800 w-full min-h-64`}>
                     <Carousel skills={hardSkills} type="hard" myInterval={3000} />
                 </div>
             </div>
             <div className="py-3">
-                <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 ${textColor}`}>Soft Skills</h2>
-                <div className={`${carouselColor} w-full min-h-64`}>
+                <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 text-black dark:text-white`}>Soft Skills</h2>
+                <div className={`bg-orange-100 dark:bg-zinc-800 w-full min-h-64`}>
                     <Carousel type="soft" skills={softSkills} myInterval={3200} />
                 </div>
             </div>

@@ -1,21 +1,10 @@
 "use client"
 
 
-import { useAppSelector } from '@/redux/store';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
-function Carousel ({ skills, type, myInterval = 3000 }: { skills:string[], type: string, myInterval?: number}) {
-
-
-    const [buttons, setButtons] = useState('text-white bg-black');
-
-    const theme = useAppSelector((state) => state.theme).theme;
-
-    useEffect(() => {
-        const buttons = (theme === "dark") ? 'text-white bg-black' : 'text-black bg-white';
-        setButtons(buttons);
-    }, [theme]);
+function Carousel ({ skills, type, myInterval = 3000 }: { skills:string[], type: string, myInterval?: number}) {;
 
 
 
@@ -55,8 +44,8 @@ function Carousel ({ skills, type, myInterval = 3000 }: { skills:string[], type:
                 ))}
             </div>
             <div className="carousel-buttons">
-                <i className={`fa-solid fa-arrow-left cursor-pointer p-3 mx-2 rounded-full ${buttons}`} aria-hidden="true" onClick={handlePrev}></i>
-                <i className={`fa-solid fa-arrow-right cursor-pointer p-3 mx-2 rounded-full ${buttons}`}aria-hidden="true" onClick={handleNext}></i>
+                <i className={`fa-solid fa-arrow-left cursor-pointer p-3 mx-2 rounded-full text-black bg-white dark:text-white dark:bg-black`} aria-hidden="true" onClick={handlePrev}></i>
+                <i className={`fa-solid fa-arrow-right cursor-pointer p-3 mx-2 rounded-full text-black bg-white dark:text-white dark:bg-black`}aria-hidden="true" onClick={handleNext}></i>
             </div>
         </div>
     );

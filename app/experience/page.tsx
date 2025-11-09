@@ -2,9 +2,7 @@
 
 
 import Career from "@/components/Career";
-import { useAppSelector } from "@/redux/store";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 
 
@@ -12,28 +10,13 @@ import { useEffect, useState } from "react";
 
 function ExperiencePage() {
 
-    // * Managing the theme changes
-    const [bgColor, setBgColor] = useState('bg-zinc-900');
-    const [textColor, setTextColor] = useState('text-white');
-
-    const theme = useAppSelector((state) => state.theme).theme;
-
-
-    useEffect(() => {
-        const bgColor = (theme === "dark") ? 'bg-zinc-900 section-dark' : 'bg-orange-50 section-light';
-        const textColor = (theme === "dark") ? 'text-white' : 'text-black';
-
-        setTextColor(textColor);
-        setBgColor(bgColor);
-    }, [theme]);
-
 
     return(
-        <section id="experience" className={`${bgColor} ${textColor} p-4 min-h-125 flex flex-col items-center`}>
+        <section id="experience" className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className="text-center text-3xl lg:text-4xl py-10">My Experience</h1>
             <p className="text-center my-2 text-sm lg:text-lg">I had the opportunity to learn and to work with many interesting companies since I started diving into computer science and web development.</p>
             <div className="p-0 lg:p-5">
-                {false && <Career title="Technical assistant in technology development" logo="udem.png" period="01 January 2025 - ongoing (about a year)" companyInfos="Digital Teaching and Learning Strategies Team - University of Montreal" site="https://fas.umontreal.ca/faculte/direction-et-gouvernance/vice-decanat-etudes-de-cycles-superieurs-et-engagement-communautaire/#c71957" mail="viet-cuong.pham@umontreal.ca">
+                {true && <Career title="Technical assistant in technology development" logo="udem.png" period="01 January 2025 - ongoing (about a year)" companyInfos="Digital Teaching and Learning Strategies Team - University of Montreal" site="https://fas.umontreal.ca/faculte/direction-et-gouvernance/vice-decanat-etudes-de-cycles-superieurs-et-engagement-communautaire/#c71957" mail="viet-cuong.pham@umontreal.ca">
                     I work on various projects, mostly front-end, where I focus primarily on building components and adding new features with Vue.js. One of the projects, for example, involves developing a platform that allows teachers to create university courses. In this case, the components integrated into 
                     the web application are reused by course designers, allowing them to assemble and structure their content efficiently. Another project is an application that helps students build resilience to face the challenges they encounter during their studies. The team&apos;s working strategy is the Scrum Agile strategy.
                 </Career>}

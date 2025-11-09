@@ -1,8 +1,6 @@
 "use client"
 
 import Project from "@/components/Project";
-import { useAppSelector } from "@/redux/store";
-import { useEffect, useState } from "react";
 
 
 
@@ -10,28 +8,8 @@ import { useEffect, useState } from "react";
 
 function ProjectsPage() {
 
-    const [bgColor, setBgColor] = useState('bg-zinc-900');
-    const [textColor, setTextColor] = useState('text-white');
-    const [borderColor, setBorderColor] = useState('border-white');
-
-
-    const theme = useAppSelector((state) => state.theme).theme;
-
-
-    useEffect(() => {
-        const bgColor = (theme === "dark") ? 'bg-zinc-900 section-dark' : 'bg-orange-50 section-light';
-        const textColor = (theme === "dark") ? 'text-white' : 'text-black';
-        const borderColor = (theme === "dark") ? 'border-white' : 'border-black';
-
-        setTextColor(textColor);
-        setBgColor(bgColor);
-        setBorderColor(borderColor);
-    }, [theme]);
-
-
-
     return (
-        <section className={`${bgColor} ${textColor} p-4 min-h-125 flex flex-col items-center`}>
+        <section className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className="text-center text-3xl lg:text-4xl py-10">Other Projects</h1>
             <p className="text-center my-2">Apart from my main projects presented on my home page, here are some of my other projects.</p>
             <div className="my-3">
@@ -51,7 +29,7 @@ function ProjectsPage() {
                     But I&apos;ve managed to do it and I&apos;m really proud of the result. It&apos;s a really simple app but I think it really makes a
                     solid use of the basic technologies.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming6" title="Simple online store for games" src="/projects/videos/oop.mp4" github="https://github.com/Josh012006/OOP" poster="/projects/g6.webp">
                     This is a very primitive e commerce website. It is done using the basic languages like HTML, CSS and JS(with the DOM).
                     <br/>
@@ -59,7 +37,7 @@ function ProjectsPage() {
                     I particularly like this project because it helped me understand and dive deeper into the concept of Object Oriented Programming in JavaScript. I created classes for the products, the cart and the cart items. I also used the local storage to save the cart. The website is responsive and the user can add products to the cart, remove them, see the total price and even buy them. 
                     Even though it is not complex, it displays that I have good foundations in web development.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming7" title="Employee management system" src="/projects/videos/employee.mp4" github="https://github.com/Josh012006/PRODIGY_FS_02" poster="/projects/g7.webp">
                     This is a secure employee management system done using Next.js, Typescript and MongoDB. For the style I used TailwindCSS.
                     <br/>
@@ -70,7 +48,7 @@ function ProjectsPage() {
                     <br/>
                     This project helps display my understanding of MVC organization and my ability to use Next.js to build beautiful and fast working web applications.
                 </Project>
-                <div className={`border-2 rounded-lg ${borderColor} mx-auto w-1/6 my-3 h-0`}></div>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming8" title="Real time chat application" src="/projects/videos/echo.mp4" github="https://github.com/Josh012006/PRODIGY_FS_04" poster="/projects/g8.webp">
                     A real time chat application done using the WebSockets and Next.js. I&apos;ve called it Echo.
                     <br/>
