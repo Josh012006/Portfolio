@@ -62,9 +62,11 @@ function Projects() {
             </div>
             <br />
             <p className="p-4 text-center text-sm lg:text-xl">
-                I&apos;ve completed a number of interesting projects to display my skills. I will show an 
-                overview here but they can be further seen on my github page. Some of the projects are online, 
-                so go check the github and leave a star💫 if possible!
+                I&apos;ve completed a number of interesting projects to deepen my skills. I display five of my most complete here but you can see more of them
+                by going on my github page or by clicking on the link below. 
+            </p>
+            <p className="p-4 flex items-center justify-center text-center text-sm lg:text-xl">
+                <Link target="_blank" href='/projects' className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-4`}>Other projects</Link>
             </p>
             <div className="p-0 lg:p-5">
                 <Project id="ming0" title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g0.webp" demo="https://techmasters-delta.vercel.app/">
@@ -139,10 +141,6 @@ function Projects() {
                     It was my first time building a backend in Java and also using Morphia, so at first it was a bit of a challenge. But it ended in a beautiful experience. It helped us follow the formal steps involved in building a software, going from the UML diagrams to the implementation of the code, without forgetting the tests with JUnit. It also helped me practice the layered architecture one more time while introducing me to peer-to-peer architecture.
                 </Project>
             </div>
-            <p className="p-4 flex flex-col items-center justify-center gap-3 text-center text-sm lg:text-xl">
-                Those are only a part of my projects. You can see more here.
-                <Link target="_blank" href='/projects' className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-4`}>Other projects</Link>
-            </p>
         </section>
     )
 }
