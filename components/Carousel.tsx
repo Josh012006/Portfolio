@@ -35,7 +35,7 @@ function Carousel ({ skills, type, myInterval = 3000 }: { skills:string[], type:
             >
                 {skills.map((skill, index) => (
                 <div className="carousel-item min-w-full box-border flex flex-col items-center justify-center p-3 min-h-full" key={index}>
-                    {type === "hard" && <Image alt={`${skill}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill}.svg`} className={`mx-auto my-auto py-3`} width={128} height={128} />}
+                    {type === "hard" && <Image alt={`${skill}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@${(skill === "c/c-original")? "v2.16.0" : "latest"}/icons/${skill}.svg`} className={`mx-auto my-auto py-3`} width={128} height={128} />}
                     {type === "soft" && <div className='flex flex-col items-center justify-center'>
                         <Image alt={`${skill}`} src={`/skills/${skill.toLowerCase()}.webp`} className={`mx-auto my-auto py-3`} width={128} height={128} />
                         <h3 className='text-center text-base lg:text-2xl my-2'>{skill}</h3>
