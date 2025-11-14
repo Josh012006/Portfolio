@@ -31,8 +31,8 @@ function Header() {
         <header className={`min-h-24 text-black dark:text-white lg:px-2 grid grid-cols-12 items-center border-b-2 border-b-zinc-900 lg:sticky lg:z-50 lg:top-0 bg-orange-100 dark:bg-black`}>
             <Link href='/' className = {`${font.className} text-4xl font-bold col-span-12 text-center m-3 lg:col-span-2`}>JM</Link>
             <div className="grid grid-cols-2 col-span-12 lg:col-span-1 items-center">
-                <span className="block lg:hidden" onClick = {() => {setShow(!show)}}><i className={`fa-bars fa-solid m-3 text-2xl rounded-md col-span-1 w-10 p-2 cursor-pointer text-black dark:text-white`} aria-hidden = "true"></i></span>
-                <i className={`${icon} fa-solid absolute right-0 m-5 lg:relative text-2xl col-span-1 lg:col-span-2 w-10 p-2 cursor-pointer text-black dark:text-white`} aria-hidden = "true" onClick = {() => {document.documentElement.classList.toggle('dark'); dispatch(changeTheme());}}></i>
+                <span className="block lg:hidden" onClick = {() => {setShow(!show)}}><i className={`select-none fa-bars fa-solid m-3 text-2xl rounded-md col-span-1 w-10 p-2 cursor-pointer text-black dark:text-white`} aria-hidden = "true"></i></span>
+                <i className={`${icon} select-none fa-solid absolute right-0 m-5 lg:relative text-2xl col-span-1 lg:col-span-2 w-10 p-2 cursor-pointer text-black dark:text-white`} aria-hidden = "true" onClick = {() => {document.documentElement.classList.toggle('dark'); dispatch(changeTheme());}}></i>
             </div>
             <nav className={`col-span-12 lg:col-span-9 grid-cols-1 lg:grid lg:grid-cols-8 text-base lg:text-lg text-center items-center mt-3 mb-1 lg:mt-0 lg:mb-0 ${(show)? "grid" : "hidden"}`}>
                 <Link href = "/#home" className={`p-2 flex items-center justify-center lg:rounded-t-lg h-full lg:p-4 lg:m-0 hover:bg-orange-200 lg:hover:border-b-2 lg:hover:border-b-black dark:hover:bg-zinc-900 dark:lg:hover:border-b-2 dark:lg:hover:border-b-white`}>Home</Link>
