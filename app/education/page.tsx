@@ -9,7 +9,7 @@ function EducationPage() {
         <section id="education" className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className="text-center text-3xl lg:text-4xl py-10">My Education</h1>
             <p className="text-center my-2 text-sm lg:text-lg">Here&apos;s a snapshot of my academic journey and the foundation that shapes my skills.</p>
-            <div className="p-0 lg:p-5">x
+            <div className="p-0 lg:p-5">
                 <Career title="Software Development Bootcamp at GOMYCODE" logo="gomycode.jpeg" period="January 2024 - July 2024 (6 months)" companyInfos="GomyCode Sénégal" site="https://gomycode.com/home-01/" mail="hello@gomycode.com">
                     I participated in a 6 months bootcamp at GOMYCODE SENEGAL. There I learned all there was to know about fullstack web development. We started with the basics like HTML, CSS (with Bootstrap, TailwindCSS and also SASS) and JavaScript (with the DOM and ES6). We then learned how to use Git and Github for Version Control. 
                     Then next step was to build a solid foundation in Algorithms. So we explored data structures, recursion, sorting and searching algorithms and worked mainly on our logic and our critical thinking. After that we dived into relational databases with SQL (DDL, DML, DQL and MySQL) and non-relational databases focusing mainly on MongoDB and Mongoose. 

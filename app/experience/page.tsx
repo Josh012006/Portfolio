@@ -1,6 +1,5 @@
 "use client"
 
-
 import Career from "@/components/Career";
 import Link from "next/link";
 
