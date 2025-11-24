@@ -1,7 +1,9 @@
 "use client"
 
+import { getSeason } from "@/utils/generalBg";
 import { Caveat } from "next/font/google";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
 
@@ -14,9 +16,17 @@ const images = [
 
 function About() {
 
+    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
+    
+    useEffect(() => {
+        const season = getSeason();
+
+        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
+    }, []);
+
 
     return(
-        <section className={`min-h-125 py-8 flex justify-center items-center bg-orange-50 text-black bg-section-light dark:bg-zinc-900 dark:text-white dark:bg-section-dark `} id="about">
+        <section className={`min-h-125 py-8 flex justify-center items-center bg-orange-50 text-black dark:bg-zinc-900 ${bg} dark:text-white `} id="about">
             <div className={`grid grid-cols-1 lg:grid-cols-5 bg-orange-100 dark:bg-zinc-800 rounded-lg min-h-96 w-11/12 lg:w-5/6`}>
                 <div className={`col-span-1 lg:col-span-2 min-h-96 bg-cover lg:bg-[length:200%] lg:min-h-125 bg-no-repeat bg-center rounded-t-lg lg:!rounded-l-lg lg:rounded-t-0 relative lg:shadow-custom-light dark:lg:shadow-custom-dark`} style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/about0.webp')`}}></div>
                 <div className={`col-span-1 lg:col-span-3 text-sm lg:text-xl flex flex-col text-justify indent-6 justify-center py-5 px-5 lg:px-11`}>

@@ -1,6 +1,8 @@
 "use client"
 
 import Project from "@/components/Project";
+import { getSeason } from "@/utils/generalBg";
+import { useState, useEffect } from "react";
 
 
 
@@ -8,8 +10,16 @@ import Project from "@/components/Project";
 
 function ProjectsPage() {
 
+    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
+    
+    useEffect(() => {
+        const season = getSeason();
+
+        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
+    }, []);
+
     return (
-        <section className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
+        <section className={`bg-orange-50 dark:bg-zinc-900 ${bg} text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className="text-center text-3xl lg:text-4xl py-10">Other Projects</h1>
             <p className="text-center my-2">Apart from my main projects presented on my home page, here are some of my other projects.</p>
             <div className="my-3">
