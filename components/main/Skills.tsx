@@ -1,5 +1,7 @@
 "use client"
 
+import { getSeason } from "@/utils/generalBg";
+import { useState, useEffect } from "react";
 import Carousel from "../Carousel";
 
 
@@ -61,10 +63,18 @@ function Skills () {
         "TimeManagement"
     ];
 
+    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
+    
+    useEffect(() => {
+        const season = getSeason();
+
+        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
+    }, []);
+
 
 
     return (
-        <section id="skills"  className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white py-4 min-h-125`}>
+        <section id="skills"  className={`bg-orange-50 dark:bg-zinc-900 ${bg} text-black dark:text-white py-4 min-h-125`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>My Skills</h1>
             <div className="py-3">
                 <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 text-black dark:text-white`}>Hard Skills</h2>

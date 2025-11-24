@@ -8,6 +8,7 @@ import Project from "../Project";
 
 import { Caveat } from "next/font/google";
 import Link from "next/link";
+import { getSeason } from "@/utils/generalBg";
 
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
@@ -42,10 +43,18 @@ function Projects() {
         }
     }, []);
 
+    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
+    
+    useEffect(() => {
+        const season = getSeason();
+
+        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
+    }, []);
+
 
 
     return (
-        <section id="projects" className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
+        <section id="projects" className={`bg-orange-50 dark:bg-zinc-900 ${bg} text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>Projects</h1>
             <div className={`min-h-125 my-16 mx-5 w-full lg:w-4/6 rounded-lg border-2 border-black dark:border-white relative bg-transparent`}>
                 <div className={`min-h-125 rounded-lg m-3 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat font-bold`} style={{backgroundImage: `${(theme === 'dark')? 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))' : 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6))'}, url('/projects/g${selectedProject}.webp')`}}>

@@ -1,13 +1,24 @@
 "use client"
 
+
 import Career from "@/components/Career";
+import { getSeason } from "@/utils/generalBg";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 function ExperiencePage() {
 
+    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
+    
+    useEffect(() => {
+        const season = getSeason();
+
+        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`);
+    }, []);
+
 
     return(
-        <section id="experience" className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
+        <section id="experience" className={`bg-orange-50 dark:bg-zinc-900 ${bg} text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className="text-center text-3xl lg:text-4xl py-10">My Experience</h1>
             <p className="text-center my-2 text-sm lg:text-lg">I had the opportunity to learn and to work with many interesting companies since I started diving into computer science and web development.</p>
             <div className="p-0 lg:p-5">

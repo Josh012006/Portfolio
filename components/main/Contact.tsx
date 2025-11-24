@@ -4,6 +4,7 @@ import { useAppSelector } from "@/redux/store";
 import { Caveat } from "next/font/google";
 import { FormEvent, useEffect, useState } from "react";
 import Loader from "../Loader";
+import { getSeason } from "@/utils/generalBg";
 
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
@@ -24,6 +25,14 @@ function Contact() {
         const loaderColor = (theme === "dark") ? '#fff' : '#000';
         setLoaderColor(loaderColor);
     }, [theme]);
+
+    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
+    
+        useEffect(() => {
+            const season = getSeason();
+    
+            setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
+        }, []);
 
 
 
@@ -76,7 +85,7 @@ function Contact() {
 
 
     return (
-        <section id="contact" className={`bg-orange-50 bg-section-light dark:bg-zinc-900 dark:bg-section-dark text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
+        <section id="contact" className={`bg-orange-50 dark:bg-zinc-900 ${bg}  text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
             <h1 className={`text-center text-3xl lg:text-4xl py-10 ${font.className}`}>Let&apos;s connect</h1>
             <p className="p-2 text-base lg:text-xl text-center">Happy you came all the way down 🥳. I would be glad to connect with you. So why not leave your impression of the website. Have a nice day!</p>
             {error && <p className="text-center text-red-500 bg-red-200 border-2 border-red-500 p-3 rounded-lg">{error}</p>}
