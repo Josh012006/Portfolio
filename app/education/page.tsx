@@ -32,6 +32,10 @@ function EducationPage() {
                     <br />
                     At the end of the bootcamp, I received a <Link className="text-blue-700 dark:text-blue-400 underline" target="_blank" href="https://diploma.gomycode.app/?id=31722254428800479">certification in fullstack web development</Link> for my dedication and to prove my knowledge.
                 </Career>
+                <Career title="Baccalaureate of Secondary Education Major in Mathematics and Physics-Chemistry" period="Received in July 2023" companyInfos="Collège Catholique Ste Thérèse de l'Enfant Jésus">
+                    Completed the Benin National Baccalaureate (Series C – Mathematics and Physical Sciences) at Collège Catholique Sainte Thérèse de l’Enfant Jésus. The Series C curriculum provides intensive training in advanced mathematics, physics, and applied scientific coursework, building 
+                    strong analytical and problem-solving foundations for future studies in engineering and computer science.
+                </Career>
             </div>
         </section>
     )
