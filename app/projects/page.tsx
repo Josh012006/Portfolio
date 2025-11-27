@@ -1,8 +1,7 @@
 "use client"
 
 import Project from "@/components/Project";
-import { getSeason } from "@/utils/generalBg";
-import { useState, useEffect } from "react";
+import useSeasonBg from "@/hooks/useSeasonBg";
 
 
 
@@ -10,13 +9,7 @@ import { useState, useEffect } from "react";
 
 function ProjectsPage() {
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-    
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-    }, []);
+    const bg = useSeasonBg();
 
     return (
         <section className={`bg-orange-50 dark:bg-zinc-900 ${bg} text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>

@@ -8,7 +8,7 @@ import Project from "../Project";
 
 import { Caveat } from "next/font/google";
 import Link from "next/link";
-import { getSeason } from "@/utils/generalBg";
+import useSeasonBg from "@/hooks/useSeasonBg";
 
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
@@ -43,13 +43,7 @@ function Projects() {
         }
     }, []);
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-    
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-    }, []);
+    const bg = useSeasonBg();
 
 
 

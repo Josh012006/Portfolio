@@ -1,28 +1,16 @@
 "use client"
 
-import { getSeason } from "@/utils/generalBg";
+import useSeasonBg from "@/hooks/useSeasonBg";
 import { Caveat } from "next/font/google";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
-
-
-const images = [
-    'about0.webp',
-];
 
 
 
 function About() {
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-    
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-    }, []);
+    const bg = useSeasonBg();
 
 
     return(
@@ -60,7 +48,7 @@ function About() {
                     <br />
                     <br />
                     <div className="flex items-center">
-                        <Link href="/J_Mongan CV.pdf" target="_blank" className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-2`}><span>Download Resume</span><i className="fa-solid fa-download mx-2" aria-hidden="true"></i></Link>
+                        <Link href="/J_Mongan CV.pdf" target="_blank" className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-2`}><span className="flex flex-col items-center justify-center"><span>Download Resume</span><span>(Not up to date)</span></span><i className="fa-solid fa-download mx-2" aria-hidden="true"></i></Link>
                         <div className="grid grid-cols-2 justify-items-center">
                             <Link href="https://github.com/Josh012006" className="text-center" target="_blank"><i className="select-none fa-brands fa-github" aria-hidden="true"></i></Link>
                             <Link href="https://www.linkedin.com/in/josu%C3%A9-mongan-a7b6242b8/" className="text-center" target="_blank"><i className="select-none fa-brands fa-linkedin" aria-hidden="true"></i></Link>

@@ -1,21 +1,14 @@
 "use client"
 
 import Career from "@/components/Career";
-import { getSeason } from "@/utils/generalBg";
+import useSeasonBg from "@/hooks/useSeasonBg";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 
 
 function EducationPage() {
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-    }, []);
+    const bg = useSeasonBg();
 
     return(
         <section id="education" className={`bg-orange-50 dark:bg-zinc-900 ${bg}  text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>

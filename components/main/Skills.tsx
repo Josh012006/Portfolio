@@ -1,7 +1,6 @@
 "use client"
 
-import { getSeason } from "@/utils/generalBg";
-import { useState, useEffect } from "react";
+import useSeasonBg from "@/hooks/useSeasonBg";
 import Carousel from "../Carousel";
 
 
@@ -63,13 +62,7 @@ function Skills () {
         "TimeManagement"
     ];
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-    
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-    }, []);
+    const bg = useSeasonBg();
 
 
 

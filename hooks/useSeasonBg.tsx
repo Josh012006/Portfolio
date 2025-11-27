@@ -1,4 +1,6 @@
-export function getSeason() {
+import { useState, useEffect } from "react";
+
+function getSeason() {
     const now = new Date();
     const year = now.getFullYear();
 
@@ -13,3 +15,17 @@ export function getSeason() {
     if (now >= fallStart   && now < winterStart) return "autumn";
     return "winter";
 }
+
+function useSeasonBg() {
+    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
+        
+    useEffect(() => {
+        const season = getSeason();
+
+        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
+    }, []);
+
+    return bg;
+}
+
+export default useSeasonBg;
