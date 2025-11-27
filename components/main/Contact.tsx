@@ -4,11 +4,7 @@ import { useAppSelector } from "@/redux/store";
 import { Caveat } from "next/font/google";
 import { FormEvent, useEffect, useState } from "react";
 import Loader from "../Loader";
-<<<<<<< HEAD
-import { getSeason } from "@/utils/generalBg";
-=======
 import useSeasonBg from "@/hooks/useSeasonBg";
->>>>>>> e1ef38c86dcb7a2500fe85712b1d1600d0474e6a
 
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
@@ -30,18 +26,7 @@ function Contact() {
         setLoaderColor(loaderColor);
     }, [theme]);
 
-<<<<<<< HEAD
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-    
-        useEffect(() => {
-            const season = getSeason();
-    
-            setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-        }, []);
-
-=======
     const bg = useSeasonBg();
->>>>>>> e1ef38c86dcb7a2500fe85712b1d1600d0474e6a
 
 
     const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
