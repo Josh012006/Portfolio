@@ -1,21 +1,16 @@
 "use client"
 
 import Career from "@/components/Career";
-import { getSeason } from "@/utils/generalBg";
+import useSeasonBg from "@/hooks/useSeasonBg";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+
+
 
 
 
 function EducationPage() {
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-    }, []);
+    const bg = useSeasonBg();
 
     return(
         <section id="education" className={`bg-orange-50 dark:bg-zinc-900 ${bg}  text-black dark:text-white p-4 min-h-125 flex flex-col items-center`}>
@@ -32,6 +27,10 @@ function EducationPage() {
                     It was a truly enriching experience and I learned a lot. I also had the opportunity to work on a lot of projects and to collaborate with a lot of people. I also learned how to work in a team and how to manage my time and my tasks.
                     <br />
                     At the end of the bootcamp, I received a <Link className="text-blue-700 dark:text-blue-400 underline" target="_blank" href="https://diploma.gomycode.app/?id=31722254428800479">certification in fullstack web development</Link> for my dedication and to prove my knowledge.
+                </Career>
+                <Career title="Baccalaureate of Secondary Education Major in Mathematics and Physics-Chemistry" period="Received in July 2023" companyInfos="Collège Catholique Ste Thérèse de l'Enfant Jésus">
+                    Completed the Benin National Baccalaureate (Series C – Mathematics and Physical Sciences) at Collège Catholique Sainte Thérèse de l’Enfant Jésus. The Series C curriculum provides intensive training in advanced mathematics, physics, and applied scientific coursework, building 
+                    strong analytical and problem-solving foundations for future studies in engineering and computer science.
                 </Career>
             </div>
         </section>

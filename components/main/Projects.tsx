@@ -8,7 +8,7 @@ import Project from "../Project";
 
 import { Caveat } from "next/font/google";
 import Link from "next/link";
-import { getSeason } from "@/utils/generalBg";
+import useSeasonBg from "@/hooks/useSeasonBg";
 
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
@@ -29,6 +29,7 @@ const projects = [
 function Projects() {
 
     const [selectedProject, setSelectedProject] = useState(0);
+    const [resetKey, setResetKey] = useState(0);
 
     const theme = useAppSelector((state) => state.theme).theme;
 
@@ -41,16 +42,9 @@ function Projects() {
         return () => {
             clearInterval(interval);
         }
-    }, []);
+    }, [resetKey]);
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-    
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`)
-    }, []);
-
+    const bg = useSeasonBg();
 
 
     return (
@@ -62,7 +56,7 @@ function Projects() {
                     <div className="flex flex-col lg:flex-row items-center justify-center my-28">
                         {projects && projects.map((_, index) => {
                             return <div key={index} className={`flex justify-center items-center lg:flex-col transform smooth-translate ${(selectedProject === index)? "-translate-x-10 lg:-translate-y-14 lg:-translate-x-0" : ""}`}>
-                                <Link href={`/#ming${index}`} className="m-1 rounded-sm w-28 h-4 lg:w-4 lg:h-40 bg-cover bg-no-repeat bg-center cursor-pointer" style={{backgroundImage: `url('/projects/ming${index}.webp')`}} onMouseEnter={() => {setSelectedProject(index)}}></Link>
+                                <Link href={`/#ming${index}`} className="m-1 rounded-sm w-28 h-4 lg:w-4 lg:h-40 bg-cover bg-no-repeat bg-center cursor-pointer" style={{backgroundImage: `url('/projects/ming${index}.webp')`}} onMouseEnter={() => {setSelectedProject(index), setResetKey(k => k + 1)}}></Link>
                                 <span className={`border-white border rounded-full w-2 h-2 ${(selectedProject === index)? "block" : "hidden"}`}></span>
                             </div>
                         })}

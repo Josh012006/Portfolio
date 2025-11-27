@@ -2,19 +2,12 @@
 
 
 import Career from "@/components/Career";
-import { getSeason } from "@/utils/generalBg";
+import useSeasonBg from "@/hooks/useSeasonBg";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 function ExperiencePage() {
 
-    const [bg, setBg] = useState<string>("bg-section-light-autumn dark:bg-section-dark-autumn");
-    
-    useEffect(() => {
-        const season = getSeason();
-
-        setBg(`bg-section-light-${season} dark:bg-section-dark-${season}`);
-    }, []);
+    const bg = useSeasonBg();
 
 
     return(
