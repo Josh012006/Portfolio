@@ -20,7 +20,7 @@ function About() {
                 <div className={`col-span-1 lg:col-span-3 text-sm lg:text-xl flex flex-col text-justify indent-6 justify-center py-5 px-5 lg:px-11`}>
                     <h1 className={`text-center text-3xl lg:text-4xl my-10 ${font.className}`}>About me</h1>
                     <p>
-                        I&apos;m a software developer passionate about engineering and automation. Thanks God, 
+                        I am a software developer passionate about engineering and automation. Thanks God, 
                         my journey in programming began in high school. And ever since, I have been driven by a relentless 
                         curiosity to delve deeper into the vast world of computer science.
                     </p>

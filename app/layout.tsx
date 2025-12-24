@@ -37,7 +37,7 @@ export default function RootLayout({
 
         <link rel="preload" as="video" href="/home-animation.mp4" />
 
-        <link rel="preload" as="image" href="/about0.webp" />
+        <link rel="preload" as="image" href="/profile_picture.jpg" />
         
       </head>
       <ReduxProvider>
