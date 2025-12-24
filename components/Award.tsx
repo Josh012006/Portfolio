@@ -12,7 +12,7 @@ function Award({title, imgs, children} : {title: string; imgs?: string[]; childr
                     return <img className="col-span-1 w-60 m-2 justify-items-center" key={`img-${index}`} src={`/awards/${src}`} alt="showcasing" />
                 })}
             </div>}
-            <hr className="h-[2px] bg-black dark:bg-white"/>
+            <br />
         </li>
     )
 }
