@@ -14,7 +14,7 @@ function Career({children, title, logo, period, companyInfos, site, mail}: {chil
             <div className={`grid grid-cols-1 ${logo? "lg:grid-cols-3" : "lg:grid-cols-2"} items-center justify-items-center gap-1`}>
                 <div className="flex flex-col items-center gap-1">
                     <span className="font-bold text-center">{companyInfos}</span>
-                    {site && <Link target="_blank" href={`${site}`} className="text-blue-700 dark:text-blue-400 underline text-center">{site}</Link>}
+                    {site && <Link target="_blank" href={`${site}`} className="text-blue-700 dark:text-blue-400 underline text-center block break-all">{site}</Link>}
                     {mail && <Link target="_blank" href={`mailto:${mail}`} className="text-blue-700 dark:text-blue-400 underline text-center">{mail}</Link>}
                 </div>
                 <p className="font-bold">{period}</p>

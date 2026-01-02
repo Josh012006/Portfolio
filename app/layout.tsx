@@ -33,6 +33,7 @@ export default function RootLayout({
         <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://josue-mongan.vercel.app" />
         <meta property="og:type" content="website" />
+        <meta name="robots" content="noindex, nofollow, noarchive"></meta>
 
 
         <link rel="preload" as="video" href="/home-animation.mp4" />

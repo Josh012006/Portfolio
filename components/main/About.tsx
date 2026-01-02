@@ -48,7 +48,7 @@ function About() {
                     <br />
                     <br />
                     <div className="flex items-center">
-                        <Link href="/J_Mongan CV.pdf" target="_blank" className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-2`}><span className="flex flex-col items-center justify-center"><span>Download Resume</span><span>(Not up to date)</span></span><i className="fa-solid fa-download mx-2" aria-hidden="true"></i></Link>
+                        <Link href="/J_Mongan_CV_English.pdf" target="_blank" className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-2`}><span className="flex flex-col items-center justify-center">Download Resume</span><i className="fa-solid fa-download mx-2" aria-hidden="true"></i></Link>
                         <div className="grid grid-cols-2 justify-items-center">
                             <Link href="https://github.com/Josh012006" className="text-center" target="_blank"><i className="select-none fa-brands fa-github" aria-hidden="true"></i></Link>
                             <Link href="https://www.linkedin.com/in/josu%C3%A9-mongan-a7b6242b8/" className="text-center" target="_blank"><i className="select-none fa-brands fa-linkedin" aria-hidden="true"></i></Link>
