@@ -32,6 +32,19 @@ function ProjectsPage() {
                     But I&apos;ve managed to do it and I&apos;m really proud of the result. It&apos;s a really simple app but I think it really makes a
                     solid use of the basic technologies.
                 </Project>
+                <Project id="ming10" title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g10.webp" demo="https://techmasters-delta.vercel.app/">
+                    Modest website for selling products coded mainly using Express and Handlebars. It&apos;s really simple 😄.
+                    <br />
+                    <br />
+                    This project really helped me using express to handle routes. Through it I&apos;ve also discovered the usage
+                    of the view engine Handlebars. I&apos;ve used a middleware to make the site only available between 9 AM and 5 PM.
+                    <br />
+                    <br />
+                    Through this project I&apos;ve learned how to use Express to handle routes and how to use Handlebars to display
+                    the data. It really gave me a good understanding of routes definition and middlewares. I&apos;m also really proud of
+                    the design of the website.
+                </Project>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
                 <Project id="ming6" title="Simple online store for games" src="/projects/videos/oop.mp4" github="https://github.com/Josh012006/OOP" poster="/projects/g6.webp">
                     This is a very primitive e commerce website. It is done using the basic languages like HTML, CSS and JS(with the DOM).
