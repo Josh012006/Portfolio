@@ -73,20 +73,7 @@ function Projects() {
                 <Link target="_blank" href='/projects' className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-4`}>Other projects</Link>
             </p>
             <div className="p-0 lg:p-5">
-                <Project id="ming0" title="Tech Company Website" src="/projects/videos/express.mp4" github="https://github.com/Josh012006/Express" poster="/projects/g0.webp" demo="https://techmasters-delta.vercel.app/">
-                    Modest website for selling products coded mainly using Express and Handlebars. It&apos;s really simple 😄.
-                    <br />
-                    <br />
-                    This project really helped me using express to handle routes. Through it I&apos;ve also discovered the usage
-                    of the view engine Handlebars. I&apos;ve used a middleware to make the site only available between 9 AM and 5 PM.
-                    <br />
-                    <br />
-                    Through this project I&apos;ve learned how to use Express to handle routes and how to use Handlebars to display
-                    the data. It really gave me a good understanding of routes definition and middlewares. I&apos;m also really proud of
-                    the design of the website.
-                </Project>
-                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming1" title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g1.webp">
+                <Project id="ming0" title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g0.webp">
                     Simple tasks manager wrote in C++. I haven&apos;t done the GUI yet so it runs in the terminal.
                     But I plan to do it with Qt.
                     <br />
@@ -99,7 +86,7 @@ function Projects() {
                     But there will be an app version done with Qt in the near future.
                 </Project>
                 <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming2" title="Social Media Website" src="/projects/videos/social-media.mp4" github="https://github.com/Josh012006/PRODIGY_FS_05" poster="/projects/g2.webp">
+                <Project id="ming1" title="Social Media Website" src="/projects/videos/social-media.mp4" github="https://github.com/Josh012006/PRODIGY_FS_05" poster="/projects/g1.webp">
                     A complete social media platform where users can post content and view others&apos; posts. It&apos;s built with Next.js, TypeScript, TailwindCSS for the style and Mongoose(MongoDB) for the database.
                     <br />
                     <br />
@@ -111,7 +98,7 @@ function Projects() {
                     using referencing and embedding in MongoDB. I&apos;m really proud of the result and I think it&apos;s a really good project to show my skills in web development.
                 </Project>
                 <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming3" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g3.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
+                <Project id="ming2" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g2.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
                     Le Café du Coin is a demonstration website for a café, built with React via create-react-app. This project showcases the key features of a modern showcase 
                     site, offering an intuitive, responsive user interface. It was built as part of a group challenge with some of my peers.
                     <br />
@@ -120,7 +107,7 @@ function Projects() {
                     or showcase site development.
                 </Project>
                 <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming4" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g4.webp"> {/* todo: Add a specific user for the tests demo="https://health-appointment.vercel.app/" */}
+                <Project id="ming3" title="Health Appointment" src="/projects/videos/appointment.mp4" github="https://github.com/Josh012006/Appointment-App" poster="/projects/g3.webp"> {/* todo: Add a specific user for the tests demo="https://health-appointment.vercel.app/" */}
                     An appointment app made with Next.js and TailwindCSS. It&apos;s the greatest project I&apos;ve worked on till now.
                     <br />
                     <br />
@@ -132,7 +119,7 @@ function Projects() {
                     The part where I struggled the most is the management of the security and the restrictions on the app. It was really challenging to imagine all the cases and the possibilities to try to avoid disorder and attacks.
                 </Project>
                 <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming5" title="MaVille" src="/projects/videos/maville.mp4" github="https://github.com/Josh012006/IFT2255-ma-ville-bugbusters" poster="/projects/g5.webp" demo="https://ift-2255-ma-ville-bugbusters.vercel.app/">
+                <Project id="ming4" title="MaVille" src="/projects/videos/maville.mp4" github="https://github.com/Josh012006/IFT2255-ma-ville-bugbusters" poster="/projects/g4.webp" demo="https://ift-2255-ma-ville-bugbusters.vercel.app/">
                     An app MaVille to help the city of Montreal manage the public works more efficiently. It uses Java for the backend with a Javalin Server, React for the frontend and Morphia (MongoDB) for the database management. The app is also made to be responsive.
                     <br />
                     <br />
@@ -143,6 +130,22 @@ function Projects() {
                     <br />
                     <br />
                     It was my first time building a backend in Java and also using Morphia, so at first it was a bit of a challenge. But it ended in a beautiful experience. It helped us follow the formal steps involved in building a software, going from the UML diagrams to the implementation of the code, without forgetting the tests with JUnit. It also helped me practice the layered architecture one more time while introducing me to peer-to-peer architecture.
+                </Project>
+                <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
+                <Project id="ming5" title="NanoGoal-RL" src="/projects/videos/nanogoal-rl.mp4" github="https://github.com/Josh012006/NanoGoal-RL" poster="/projects/g5.webp">
+                    This is a goal conditioned reinforcement learning project. It is made using Python, Gymnasium and Stable-baselines3.
+                    <br />
+                    <br />
+                    First I used Gymnasium to configure my custom environment. It&apos;s a simulation of a blood vessel with walls, white blood cells and red blood cells. The target and the agent are placed randomly in the available space to navigate. 
+                    The goal is for the agent to go to the target position. To define my model, I used the PPO algorithm from Stable-Baseline3 and realised 800 000 episodes.
+                    I then tested the trained agent over 300 episodes to see its performance. It is easy to see that the agent is able to reduce the distance between it and the target. Its movements are also more continuous and he is even able to go 
+                    around walls sometimes to achieve the goal.
+                    <br />
+                    <br />
+                    But the analysis also reveals that it takes too many useless decisions and that even though it can come very close to the target, most of the time it deviates and loses time going round in circles. I suspect that it is linked to the complexity and the diversity
+                    of the environments from one episode to another. It might also be due to the fact that the training is directly done with complex environents from the start. It would be better to increase the difficulty and transform the learning into a curriculum. Apart from that,
+                    it would be interesting to explore a more realistic configuration of the environnement and even transfer the simulation to a real robot.
+                    Those are possible improvements I will be working on during the coming months.
                 </Project>
             </div>
         </section>
