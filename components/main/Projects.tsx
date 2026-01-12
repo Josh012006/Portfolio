@@ -70,7 +70,7 @@ function Projects() {
                 by going on my github page or by clicking on the link below. 
             </p>
             <p className="p-4 flex items-center justify-center text-center text-sm lg:text-xl">
-                <Link target="_blank" href='/projects' className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-4`}>Other projects</Link>
+                <Link target="_blank" href='/projects' className={`bg-orange-300 dark:bg-black text-center flex items-center justify-around rounded-md p-4 select-none`}>Other projects</Link>
             </p>
             <div className="p-0 lg:p-5">
                 <Project id="ming0" title="C++ Task Manager" src="/projects/videos/cpp.mp4" github="https://github.com/Josh012006/Tasks-Manager" poster="/projects/g0.webp">
@@ -137,15 +137,17 @@ function Projects() {
                     <br />
                     <br />
                     First I used Gymnasium to configure my custom environment. It&apos;s a simulation of a blood vessel with walls, white blood cells and red blood cells. The target and the agent are placed randomly in the available space to navigate. 
-                    The goal is for the agent to go to the target position. To define my model, I used the PPO algorithm from Stable-Baseline3 and realised 800 000 episodes.
-                    I then tested the trained agent over 300 episodes to see its performance. It is easy to see that the agent is able to reduce the distance between it and the target. Its movements are also more continuous and he is even able to go 
-                    around walls sometimes to achieve the goal.
+                    The goal is for the agent to go to the target position. To define my model, I used the PPO algorithm from Stable-Baseline3 and realised 800 000 training episodes with the custom environment.
+                    I then tested the trained agent over 300 episodes to see its performance. 
                     <br />
                     <br />
-                    But the analysis also reveals that it takes too many useless decisions and that even though it can come very close to the target, most of the time it deviates and loses time going round in circles. I suspect that it is linked to the complexity and the diversity
-                    of the environments from one episode to another. It might also be due to the fact that the training is directly done with complex environents from the start. It would be better to increase the difficulty and transform the learning into a curriculum. Apart from that,
-                    it would be interesting to explore a more realistic configuration of the environnement and even transfer the simulation to a real robot.
-                    Those are possible improvements I will be working on during the coming months.
+                    With the model I obtained, the agent is able to reduce the distance between it and the target. It is also able to make continuous movements and even to go 
+                    around walls sometimes to achieve the goal. But the analysis also revealed that it takes too many useless decisions and that even though it can come very close to the target, most of the time it deviates and loses time going round in circles. 
+                    <br />
+                    <br />
+                    I suspect that it is linked to the complexity and the diversity of the environments from one episode to another. It might also be due to the fact that the training is directly done with complex environments from the start. 
+                    It would be better to increase the difficulty and transform the learning into a curriculum. Apart from that, it would also be interesting to explore a more realistic configuration of the environment and even transfer the simulation to a real robot.
+                    Those are possible improvements I will be working on next.
                 </Project>
             </div>
         </section>
