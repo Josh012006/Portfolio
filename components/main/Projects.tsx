@@ -132,22 +132,23 @@ function Projects() {
                     It was my first time building a backend in Java and also using Morphia, so at first it was a bit of a challenge. But it ended in a beautiful experience. It helped us follow the formal steps involved in building a software, going from the UML diagrams to the implementation of the code, without forgetting the tests with JUnit. It also helped me practice the layered architecture one more time while introducing me to peer-to-peer architecture.
                 </Project>
                 <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming5" title="NanoGoal-RL" src="/projects/videos/nanogoal-rl.mp4" github="https://github.com/Josh012006/NanoGoal-RL" poster="/projects/g5.webp">
-                    This is a goal conditioned reinforcement learning project. It is made using Python, Gymnasium and Stable-baselines3.
+                <Project id="ming5" title="NanoGoal-RL" src="/projects/videos/nanogoal-rl.mp4" github="https://github.com/Josh012006/NanoGoal-RL" poster="/projects/g5.webp" doc="/projects/nanogoal-rl">
+                    <p>
+                        This is a goal-conditioned reinforcement learning project built with <strong>Python</strong>.
+                        I created a custom simulation environment where an agent must navigate toward a randomly placed target
+                        while avoiding obstacles and moving elements.
+                    </p>
+                    <p>
+                        The goal is simple: at each episode, the agent starts somewhere in the environment and has to reach the
+                        target position as efficiently as possible. I train the agent and then evaluate it on multiple episodes
+                        to measure how well it generalizes across different configurations.
+                    </p>
                     <br />
-                    <br />
-                    First I used Gymnasium to configure my custom environment. It&apos;s a simulation of a blood vessel with walls, white blood cells and red blood cells. The target and the agent are placed randomly in the available space to navigate. 
-                    The goal is for the agent to go to the target position. To define my model, I used the PPO algorithm from Stable-Baseline3 and realised 800 000 training episodes with the custom environment.
-                    I then tested the trained agent over 300 episodes to see its performance. 
-                    <br />
-                    <br />
-                    With the model I obtained, the agent is able to reduce the distance between it and the target. It is also able to make continuous movements and even to go 
-                    around walls sometimes to achieve the goal. But the analysis also revealed that it takes too many useless decisions and that even though it can come very close to the target, most of the time it deviates and loses time going round in circles. 
-                    <br />
-                    <br />
-                    I suspect that it is linked to the complexity and the diversity of the environments from one episode to another. It might also be due to the fact that the training is directly done with complex environments from the start. 
-                    It would be better to increase the difficulty and transform the learning into a curriculum. Apart from that, it would also be interesting to explore a more realistic configuration of the environment and even transfer the simulation to a real robot.
-                    Those are possible improvements I will be working on next.
+                    <p>
+                        This project explores the essentials of reinforcement learning and what is needed for an agent to learn how to navigate
+                        in complex and diverse environments. You can see the code and the documentation by clicking on one of the buttons below
+                        to see how the project elvoved and the last improvements I added.
+                    </p>
                 </Project>
             </div>
         </section>
