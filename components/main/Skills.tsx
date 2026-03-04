@@ -2,9 +2,12 @@
 
 import useSeasonBg from "@/hooks/useSeasonBg";
 import Carousel from "../Carousel";
+import Image from 'next/image';
+
 
 
 import { Caveat } from "next/font/google";
+import { useState } from "react";
 
 
 const font = Caveat({ subsets: ["latin"], weight: '400' });
@@ -64,6 +67,9 @@ function Skills () {
 
     const bg = useSeasonBg();
 
+    const [showHardSkills, setShowHardSkills] = useState<boolean>(false);
+    const [showSoftSkills, setShowSoftSkills] = useState<boolean>(false);
+
 
 
     return (
@@ -73,12 +79,51 @@ function Skills () {
                 <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 text-black dark:text-white`}>Hard Skills</h2>
                 <div className={`bg-orange-100 dark:bg-zinc-800 w-full min-h-64`}>
                     <Carousel skills={hardSkills} type="hard" myInterval={3000} />
+                    <div className="text-center">
+                        <i className={`select-none fa-solid ${showHardSkills? 'fa-chevron-up' : 'fa-chevron-down'} cursor-pointer p-3 mx-2 text-black dark:text-white`} aria-hidden="true" onClick={() => {setShowHardSkills(val => !val)}}></i>
+                    </div>
+                    <div 
+                        className={`
+                            grid grid-cols-4 lg:grid-cols-11
+                            items-center justify-items-center gap-2
+                            transition-all duration-500 ease-in-out
+                            ${showHardSkills 
+                                ? "opacity-100 scale-100 max-h-[2000px]" 
+                                : "opacity-0 scale-95 max-h-0 overflow-hidden"
+                            }
+                        `}
+                    >
+                        { hardSkills.map((skill) => {
+                            return <Image key={skill} alt={`${skill}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@${(skill === "c/c-original")? "v2.16.0" : "latest"}/icons/${skill}.svg`} className={`mx-auto my-auto py-3`} width={50} height={50} />
+                        })}
+                    </div>
                 </div>
             </div>
             <div className="py-3">
                 <h2 className={`text-center font-bold lg:text-xl mt-2 mb-5 text-black dark:text-white`}>Soft Skills</h2>
                 <div className={`bg-orange-100 dark:bg-zinc-800 w-full min-h-64`}>
                     <Carousel type="soft" skills={softSkills} myInterval={3200} />
+                    <div className="text-center">
+                        <i className={`select-none fa-solid ${showSoftSkills? 'fa-chevron-up' : 'fa-chevron-down'} cursor-pointer p-3 mx-2 text-black dark:text-white`} aria-hidden="true" onClick={() => {setShowSoftSkills(val => !val)}}></i>
+                    </div>
+                    <div 
+                        className={`
+                            grid grid-cols-3 lg:grid-cols-11
+                            items-center justify-items-center gap-2
+                            transition-all duration-500 ease-in-out
+                            ${showSoftSkills 
+                                ? "opacity-100 scale-100 max-h-[2000px]" 
+                                : "opacity-0 scale-95 max-h-0 overflow-hidden"
+                            }
+                        `}
+                    >
+                        { softSkills.map((skill) => {
+                            return <div key={skill} className='flex flex-col items-center justify-center '>
+                                <Image alt={`${skill}`} src={`/skills/${skill.toLowerCase()}.webp`} className={`mx-auto my-auto py-3`} width={50} height={50} />
+                                <h3 className='text-center text-base my-2'>{skill}</h3>
+                            </div>
+                        })}
+                    </div>
                 </div>
             </div>
         </section>
