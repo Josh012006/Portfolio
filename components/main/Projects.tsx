@@ -98,7 +98,7 @@ function Projects() {
                     using referencing and embedding in MongoDB. I&apos;m really proud of the result and I think it&apos;s a really good project to show my skills in web development.
                 </Project>
                 <div className={`border-2 rounded-lg border-black dark:border-white mx-auto w-1/6 my-3 h-0`}></div>
-                <Project id="ming2" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/challenge1" poster="/projects/g2.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
+                <Project id="ming2" title="Coffee Shop Website" src="/projects/videos/coffee.mp4" github="https://github.com/Josh012006/coffee-shop" poster="/projects/g2.webp" demo="https://coffee-shop-five-kappa.vercel.app/">
                     Le Café du Coin is a demonstration website for a café, built with React via create-react-app. This project showcases the key features of a modern showcase 
                     site, offering an intuitive, responsive user interface. It was built as part of a group challenge with some of my peers.
                     <br />
